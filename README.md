@@ -30,22 +30,25 @@ Users can:
 ###Set Up
 
 <ul>
-<li>Single repo which everyone else clones</li>
-<li>Everyone get on “development-branch” and make branches named after your slice</li>
+  <li>Single repo which everyone else clones</li>
+  <li>Everyone get on “development-branch” and make branches named after your slice</li>
 </ul>
 
-###BEFORE PUSHING STEPS:
+###BEFORE Pushing steps:
 <p>
 Did you write tests? Did those tests pass? Did you make a team annoucment about pushing? Did you show your team that your slice/feature works?
 </p>
 <ul>
-<li>git co development-branch</li>
-<li>git fetch origin</li>
-<li>git merge origin/development-branch</li>
-<li>git co my-slice-branch</li>
-<li>git merge development-branch</li>
-###THEN PUSH
-<li>git push origin my-slice-branch</li>
+  <li>git co development-branch</li>
+  <li>git fetch origin</li>
+  <li>git merge origin/development-branch</li>
+  <li>git co my-slice-branch</li>
+  <li>git merge development-branch</li>
+</ul>
+
+###Push
+<ul>
+  <li>git push origin my-slice-branch</li>
 </ul>
 
 ## Technologies
@@ -62,4 +65,4 @@ Nice to Have:
   <li>Bootstrap - frontend</li>
   <li>Heruko - deployment</li>
 </ul>
-[!Tech_Whiteboarding](./imgs/tech_architecture.jpg)
+![Tech_Whiteboarding](./imgs/tech_architecture.jpg)
