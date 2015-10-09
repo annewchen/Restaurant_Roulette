@@ -37,6 +37,3 @@ Did you write tests? Did those tests pass? Did you make a team annoucment about 
   <li>git push origin my-slice-branch</li>
 </ul>
 
-
-
-THESE ARE GABRIEL'S CHANGES YO!
