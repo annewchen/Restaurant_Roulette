@@ -1,7 +1,7 @@
 #Schedule
 <table>
   <tr>
-    <td><a href="#week-2"><b>Week 3</b></a></td>
+    <td><a href="#week-2"><b>Week 2</b></a></td>
     <td><a href="#friday-week-2">Friday</a></td>
     <td><a href="#saturday-week-2">Saturday</a></td>
     <td><a href="#sunday-week-2">Sunday</a></td>
@@ -35,9 +35,8 @@
 |  5:30 PM | BREAK TIME mandatory 10 mins
 |  6:40 PM | End of day Stand-up
 
-Notes:
-Utsab leave by 7pm
-Pumpkin competition
+Notes: Utsab leave by 7pm
+
 
 ### Saturday, Week 2
 
