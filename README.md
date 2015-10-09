@@ -5,7 +5,7 @@ Allowing groups to make quick restaurant choices. Every member of group gets to 
 ## [Individual Goals](./project_guide/individual_goals.md)
 ## [Project Goals](./project_guide/project_mvp_nth.md)
 ##User Stories
-Planner can:
+Planner::
 <ul>
   <li>A planner can register/login/logout</li>
   <li>A planner can view/Add phone numbers of friends</li>
@@ -15,14 +15,14 @@ Planner can:
   <li>A planner can automatically get a text with a link to a form</li>
 </ul>
 
-Friend can:
+Friend::
 <ul>
   <li>A friend can view a text with a link to a form</li>
-  <li>A friend canselect 2 preferences on the form out of a total of 5</li>
-  <li>A friend cansubmit a form</li>
+  <li>A friend can select 2 preferences on the form out of a total of 5</li>
+  <li>A friend can submit a form</li>
 </ul>
 
-Users can:
+Users::
 <ul>
   <li>Both planner and friends can receive a text with the decided restaurant details</li>
 </ul>
@@ -32,7 +32,7 @@ Users can:
 
 <ul>
   <li>Single repo which everyone else clones</li>
-  <li>Everyone get on “development-branch” and make branches named after your slice</li>
+  <li>Checkout onto “development-branch” and make branches named after your slice</li>
 </ul>
 
 ###BEFORE Pushing steps:
