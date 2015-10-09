@@ -1,8 +1,9 @@
-# Restaurant_Roulette
+# Restaurant Roulette
 Allowing groups to make quick restaurant choices. Every member of group gets to vote on 2 specific preferences for a restaurant. App will return a random restaurant and its details.
 
-## [Schedule](./schedule.md)
-## [Individual Goals](./individual_goals.md)
+## [Schedule](./project_guide/schedule.md)
+## [Individual Goals](./project_guide/individual_goals.md)
+## [Project Goals](./project_guide/project_mvp_nth.md)
 ##User Stories
 Planner can:
 <ul>
@@ -65,4 +66,4 @@ Nice to Have:
   <li>Bootstrap - frontend</li>
   <li>Heruko - deployment</li>
 </ul>
-![Tech_Whiteboarding](./imgs/tech_architecture.jpg)
+![Tech_Whiteboarding](./project_guide/imgs/tech_architecture.jpg)
