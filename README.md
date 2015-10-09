@@ -2,30 +2,15 @@
 Allowing groups to make quick restaurant choices. Every member of group gets to vote on 2 specific preferences for a restaurant. App will return a random restaurant and its details.
 
 ## [Schedule](./project_guide/schedule.md)
+
 ## [Individual Goals](./project_guide/individual_goals.md)
+
 ## [Project Goals](./project_guide/project_mvp_nth.md)
-##User Stories
-Planner::
-<ul>
-  <li>A planner can register/login/logout</li>
-  <li>A planner can view/Add phone numbers of friends</li>
-  <li>A planner can select friends by their name/alias</li>
-  <li>A planner can send texts out to selected friends</li>
-  <li>A planner can input requested restaurant location (City and State)</li>
-  <li>A planner can automatically get a text with a link to a form</li>
-</ul>
 
-Friend::
-<ul>
-  <li>A friend can view a text with a link to a form</li>
-  <li>A friend can select 2 preferences on the form out of a total of 5</li>
-  <li>A friend can submit a form</li>
-</ul>
+## [Project Planning](./project_guide/planning.md)
 
-Users::
-<ul>
-  <li>Both planner and friends can receive a text with the decided restaurant details</li>
-</ul>
+## [Slice](https://workflowy.com/s/rtvlppbKxh)
+![Slice](./project_guide/imgs/slice_assignment.png)
 
 ## [Git Workflow](https://gist.github.com/mikelikesbikes/ccbf4c7fd90e647138c6)
 ###Set Up
@@ -51,19 +36,3 @@ Did you write tests? Did those tests pass? Did you make a team annoucment about 
 <ul>
   <li>git push origin my-slice-branch</li>
 </ul>
-
-## Technologies
-For Minimal Viable Product:
-<ul>
-  <li><a href="http://guides.rubyonrails.org/">Ruby on Rails</a></li>
-  <li><a href="https://github.com/Yelp/yelp-ruby">Yelp API</a></li>
-  <li><a href="https://www.twilio.com/docs/api">Twilio</a></li>
-  <li><a href="https://github.com/yhordi/testing-and-code-coverage/tree/construction">Testing Selenium</a></li>
-</ul>
-Nice to Have:
-<ul>
-  <li>Meteor - make into phone app</li>
-  <li>Bootstrap - frontend</li>
-  <li>Heruko - deployment</li>
-</ul>
-![Tech_Whiteboarding](./project_guide/imgs/tech_architecture.jpg)
