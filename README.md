@@ -1,5 +1,5 @@
 # Restaurant Roulette
-Allowing groups to make quick restaurant choices. Every member of group gets to vote on 2 specific preferences for a restaurant. App will return a random restaurant and its details.
+Allowing groups to make a quick restaurant choice. Every member of the group gets to vote on two specific preferences for a restaurant (example: affordable, vegetarian options, accepts credit cards, etc). App will take the majority preferences into consideration and return a random restaurant from the pre-filtered pool of restaurants.
 
 ## [Schedule](./project_guide/schedule.md)
 
