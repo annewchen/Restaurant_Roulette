@@ -24,6 +24,7 @@
   <li>Learning new tech: APIs</li>
   <li>Increasing confidence in technical skills</li>
   <li>Doing more then just MVP (minimum viable product), hitting NTH (nice to have) features</li>
+  <li>Making beautiful and meaningful things</li>
   <li>Having fun!</li>
 </ul>
 
