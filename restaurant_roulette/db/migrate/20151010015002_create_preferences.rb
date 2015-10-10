@@ -8,7 +8,7 @@ class CreatePreferences < ActiveRecord::Migration
       t.integer :distance
       t.timestamps null: false
 
-      t.references :user
+      t.integer :participant_id
       t.references :event
     end
   end
