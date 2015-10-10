@@ -1,0 +1,16 @@
+<h1>You are invited to an event!</h1>
+<%= form_for :preference do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :text %><br>
+    <%= f.text_area :text %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
