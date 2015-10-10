@@ -1,26 +1,29 @@
 #Planning
 
 ##User Stories
-Planner::
+User as a Planner::
 <ul>
   <li>A planner can register/login/logout</li>
-  <li>A planner can view/Add phone numbers of friends</li>
+  <li>A planner can manually add phone numbers of friends</li>
   <li>A planner can select friends by their name/alias</li>
   <li>A planner can send texts out to selected friends</li>
-  <li>A planner can input requested restaurant location (City and State)</li>
+  <li>A planner can input their location (address)</li>
   <li>A planner can automatically get a text with a link to a form</li>
 </ul>
 
-Friend::
+User as a Participant::
 <ul>
-  <li>A friend can view a text with a link to a form</li>
-  <li>A friend can select 2 preferences on the form out of a total of 5</li>
-  <li>A friend can submit a form</li>
+  <li>A participant can automatically get a text with a link to a form</li>
+  <li>A participant can view a text with a link to a form</li>
+  <li>A participant can select 2 preferences on the form out of a total of 3</li>
+  <li>A participant can submit a form</li>
+  <li>A participant can receive a text with the decided restaurant details</li>
 </ul>
+
 
 Users::
 <ul>
-  <li>Both planner and friends can receive a text with the decided restaurant details</li>
+  <li>Users can receive a text with the decided restaurant details</li>
 </ul>
 
 ## Technologies
