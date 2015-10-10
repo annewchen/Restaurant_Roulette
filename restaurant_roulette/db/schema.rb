@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20151010015022) do
   create_table "events", force: :cascade do |t|
     t.string   "street_address"
     t.string   "selected_restaurant"
-    t.integer  "user_id"
+    t.integer  "planner_id"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
   end
@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 20151010015022) do
     t.integer  "distance"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-    t.integer  "user_id"
+    t.integer  "participant_id"
     t.integer  "event_id"
   end
 

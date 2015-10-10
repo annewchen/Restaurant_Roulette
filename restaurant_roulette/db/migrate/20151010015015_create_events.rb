@@ -3,7 +3,8 @@ class CreateEvents < ActiveRecord::Migration
     create_table :events do |t|
       t.string :street_address
       t.string :selected_restaurant
-      t.references :user
+
+      t.integer :planner_id
 
       t.timestamps null: false
     end
