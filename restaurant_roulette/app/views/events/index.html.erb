@@ -1,3 +1,24 @@
-<form>
+Hello, <%= @user.full_name %>!<br>
 
-</form>
+
+<%= form_for :event, url: events_path do |f| %>
+  <p>
+    <%= f.label :street_address %><br>
+    <%= f.text_field :street_address %>
+  </p>
+
+  <p>
+    <%= f.label :participant_Name %><br>
+    <%= f.text_field :alias %>
+  </p>
+
+  <p>
+    <%= f.label :participant_Phone_Number %><br>
+    <%= f.telephone_field :phone_number %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
