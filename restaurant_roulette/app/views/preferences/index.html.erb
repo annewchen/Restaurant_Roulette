@@ -1,13 +1,29 @@
 <h1>You are invited to an event!</h1>
 <%= form_for :preference do |f| %>
   <p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.label :price %><br>
+    <%= f.select :price, [['',''],['$','$'],['$$','$$'],['$$$','$$$'], ['$$$$','$$$$']] %>
   </p>
 
   <p>
-    <%= f.label :text %><br>
-    <%= f.text_area :text %>
+    <%= f.label :cuisine %><br>
+    <%= f.select :cuisine, [['',''],['Japanese','japanese'],['Chinese','chinese'],['American','american'], ['Italian','italian'],['Indian','indian']] %>
+
+  </p>
+
+  <p>
+    <%= check_box_tag(:good_for_groups ) %>
+    <%= f.label :good_for_groups %>
+  </p>
+
+  <p>
+    <%= check_box_tag(:good_for_groups ) %>
+    <%= f.label :vegetarian %>
+  </p>
+
+  <p>
+    <%= f.label :distance %><br>
+    <%= f.select :distance, [['',''],['2 blocks','2 blocks'],['6 blocks','6 blocks'],['1 mile','1 mile'], ['5 miles','5 miles']] %>
   </p>
 
   <p>
