@@ -1,5 +1,6 @@
 $(document).ready(function(){
-  $(".addInvitation").click(function(){
-    $(".invitationSet").append($(".invitationForm").html());
-  });
+  $('.addInvitation').click(function(){
+    $('.invitationSet').append($(".invitationForm").html());
+    });
 });
+
