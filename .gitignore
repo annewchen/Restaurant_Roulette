@@ -14,7 +14,9 @@
 # Ignore all logfiles and tempfiles.
 /log/*
 !/log/.keep
+*.log
 /tmp
+*
 
 # Ignore environment config file (contains api keys)
 /.env
