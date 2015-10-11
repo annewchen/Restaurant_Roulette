@@ -1,3 +1,5 @@
+require 'text_messages_helper'
+
 class EventsController < ApplicationController
   def index
     session[:user_id] = current_user.id
@@ -24,6 +26,10 @@ class EventsController < ApplicationController
           render "index"
         end
       end
+
+      #text all invitees
+      TextMessagesHelper.send_text_messages_to_invitees_and_planner(event)
+
       render "event_saved"
     else
       render "index"
