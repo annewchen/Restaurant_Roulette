@@ -2,8 +2,9 @@ module TextMessagesHelper
   def TextMessagesHelper.send_text_messages_to_invitees_and_planner(event)
     p "in send_text_messages_to_invitees_and_planner "
 
-    account_sid = "AC6882f6d03c767dfed68ddd6e61554b76"
-    auth_token = "b6c51acfab9f2d0ceefee450d074cc2c"
+    account_sid = ENV['TWILIO_ACCOUNT_SID']
+    auth_token = ENV['TWILIO_AUTH_TOKEN']
+
     client = Twilio::REST::Client.new account_sid, auth_token
 
     from = "+15105008394" # Your Twilio number
@@ -30,8 +31,10 @@ module TextMessagesHelper
   def TextMessagesHelper.send_final_selection_to_planner(event)
     p "in send_final_selection_to_planner "
 
-    account_sid = "AC6882f6d03c767dfed68ddd6e61554b76"
-    auth_token = "b6c51acfab9f2d0ceefee450d074cc2c"
+    p "account sid env: #{ENV['TWILIO_ACCOUNT_SID']}"
+
+    account_sid = ENV['TWILIO_ACCOUNT_SID']
+    auth_token = ENV['TWILIO_AUTH_TOKEN']
     client = Twilio::REST::Client.new account_sid, auth_token
 
     from = "+15105008394" # Your Twilio number
