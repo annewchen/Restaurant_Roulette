@@ -12,24 +12,24 @@ class EventsController < ApplicationController
   def create
     user = User.find_by(id: current_user.id)
 
-    event = Event.create(street_address: params[:event][:street_address])
-    user.events << event
+    event = Event.new(street_address: params[:event][:street_address])
+    if event.save
+      user.events << event
 
-    params["invitations"].each do |invitation|
-      if invitation["full_name"] != "" || invitation["phone_number"] != ""
-        invitation = Invitation.create(invitations_params(invitation))
-        event.invitations << invitation
+      params["invitations"].each do |invitation|
+        if invitation["full_name"] != "" || invitation["phone_number"] != ""
+          invitation = Invitation.create(invitations_params(invitation))
+          event.invitations << invitation
+        end
       end
+      render "submitted"
+    else
+      render "index"
     end
-
-
-    p "*" * 30
-    p "In Create"
-    render plain: params[:event].inspect
   end
 
   def invitations_params(my_params)
-    my_params.permit(:alias, :phone_number)
+    my_params.permit(:full_name, :phone_number)
   end
 
 end
