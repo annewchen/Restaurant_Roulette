@@ -9,7 +9,7 @@ class PreferencesController < ApplicationController
   def create
     @preference = Preference.new(preference_params)
     other_params
-    values = [@preference.price, @preference.cuisine, @preference.good_for_groups , @preference.vegetarian, @preference.distance]
+    values = [@preference.is_fancy, @preference.cuisine, @preference.good_for_groups , @preference.is_vegetarian, @preference.distance]
 
     filter_count = 0
 
@@ -29,13 +29,13 @@ class PreferencesController < ApplicationController
 
   private
     def preference_params
-      params.require(:preference).permit(:price, :cuisine, :distance)
+      params.require(:preference).permit(:is_fancy, :cuisine, :distance)
     end
 
     def other_params
       @preference.participant_id = current_user.id
       @preference.event_id = params[:event_id]
       @preference.good_for_groups = params[:good_for_groups]
-      @preference.vegetarian = params[:vegetarian]
+      @preference.is_vegetarian = params[:is_vegetarian]
     end
 end
