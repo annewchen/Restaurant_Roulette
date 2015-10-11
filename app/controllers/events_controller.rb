@@ -8,9 +8,7 @@ class EventsController < ApplicationController
 
   def create
     user = User.find_by(id: current_user.id)
-    p "*" * 20
     participant_count = params[:full_name].count
-    p participant_count
     event = Event.new(street_address: params[:event][:street_address])
 
     if event.save
@@ -30,9 +28,7 @@ class EventsController < ApplicationController
       end
 
         #text all invitees
-
         # TextMessagesHelper.send_text_messages_to_invitees_and_planner(event)
-
 
         render "event_saved"
       else
