@@ -1,5 +1,7 @@
 <h1>You are invited to an event!</h1>
-<p> You can only pick to 2 filters </p>
+
+<%= flash[:notice] %>
+
 <%= form_for :preference do |f| %>
   <p>
     <%= f.label :price %><br>
