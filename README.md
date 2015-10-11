@@ -10,7 +10,7 @@ Allowing groups to make a quick restaurant choice. Every member of the group get
 ## [Project Planning](./project_guide/planning.md)
 
 ## [Slice](https://workflowy.com/s/rtvlppbKxh)
-![Slice](./project_guide/imgs/slice_assignment.png)
+![Slice](./project_guide/imgs/slices.png)
 
 ## [Git Workflow](https://gist.github.com/mikelikesbikes/ccbf4c7fd90e647138c6)
 ###Set Up
@@ -37,6 +37,3 @@ Did you write tests? Did those tests pass? Did you make a team annoucment about 
   <li>git push origin my-slice-branch</li>
 </ul>
 
-
-
-THESE ARE GABRIEL'S CHANGES YO!
