@@ -22,9 +22,7 @@ class PreferencesController < ApplicationController
     if filter_count <= 2 && @preference.save
         render "thank"
     else
-        p "******************"
         flash[:notice] = "You can only pick 2 filters"
-        p "******************"
         render "index"
     end
   end
