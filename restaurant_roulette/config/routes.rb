@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'preferences/index'
+
   devise_for :users
   get 'welcome/index'
 
@@ -18,7 +20,9 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-
+  resources :events do
+    resources :preferences
+  end
   # Example resource route with options:
   #   resources :products do
   #     member do
