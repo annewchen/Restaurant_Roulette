@@ -2,12 +2,10 @@ module TextMessagesHelper
   def TextMessagesHelper.send_text_messages_to_invitees_and_planner(event)
     p "in send_text_messages_to_invitees_and_planner "
 
-    account_sid = ENV['TWILIO_ACCOUNT_SID']
-    auth_token = ENV['TWILIO_AUTH_TOKEN']
+    client = Twilio::REST::Client.new ENV['TWILIO_ACCOUNT_SID'], ENV['TWILIO_AUTH_TOKEN']
 
-    client = Twilio::REST::Client.new account_sid, auth_token
 
-    from = "+15105008394" # Your Twilio number
+    from = ENV['TWILIO_PHONE_NUMBER'] # Your Twilio number
 
     # send message to invitees
     event.invitations.each do |invitation|
@@ -33,11 +31,10 @@ module TextMessagesHelper
 
     p "account sid env: #{ENV['TWILIO_ACCOUNT_SID']}"
 
-    account_sid = ENV['TWILIO_ACCOUNT_SID']
-    auth_token = ENV['TWILIO_AUTH_TOKEN']
-    client = Twilio::REST::Client.new account_sid, auth_token
 
-    from = "+15105008394" # Your Twilio number
+    client = Twilio::REST::Client.new ENV['TWILIO_ACCOUNT_SID'], ENV['TWILIO_AUTH_TOKEN']
+
+    from = ENV['TWILIO_PHONE_NUMBER'] # Your Twilio number
 
     client.account.messages.create(
       :from => from,
