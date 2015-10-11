@@ -3,40 +3,32 @@ class EventsController < ApplicationController
     session[:user_id] = current_user.id
     @user = User.find_by(id: session[:user_id])
     @invitations = []
-    5.times do
+    3.times do
       @invitations << Invitation.new
-    p "*" * 30
-    p @invitations
     end
 
-  end
-
-  def new
-    p "*" * 30
-    p "In New"
   end
 
   def create
     user = User.find_by(id: current_user.id)
 
-    params[:invitation].each do |invitation|
-      Invitation.new(name: invitation)
+    event = Event.create(street_address: params[:event][:street_address])
+    user.events << event
+
+    p "*" * 20
+
+=begin
+    params["invitations"].each do |invitation|
+      if invitation["full_name"] != "" || invitation["phone_number"] != ""
+        invitation = Invitation.create(invitations_params(invitation))
+        event << invitation
       end
+    end
+=end
 
     p "*" * 30
     p "In Create"
     render plain: params[:event].inspect
-
-
-
-=begin
-    p "*" * 20
-    event = Event.new(street_address: params[:event][:street_address])
-    p event
-    user.events << event
-    p user.events
-    p params[:event][:street_address]
-=end
   end
 
   def invitations_params(my_params)

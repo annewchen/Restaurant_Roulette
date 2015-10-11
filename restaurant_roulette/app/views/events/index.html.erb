@@ -1,31 +1,30 @@
-Hello, <%= @user.full_name %>!<br>
+<h1>Hello, <%= @user.full_name %>!</h1>
 
 
 <%= form_for :event, url: events_path do |f| %>
   <p>
-    <%= f.label :street_address %><br>
+    <%= f.label "My Current Street Address:" %><br>
     <%= f.text_field :street_address %>
   </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
 
-<%= form_tag invitations_path do %>
-  <% @invitations.each do |invitation| %>
-    <%= fields_for 'invitations[]', invitation do |i| %>
+  <h2>Guest List:</h2>
+  <%= form_tag invitations_path do %>
+    <% @invitations.each do |invitation| %>
+      <%= fields_for 'invitations[]', invitation do |i| %>
 
-      <div class="field">
-        <%= i.label :participant_Name %>
-        <%= i.text_field :full_name %>
-      </div>
-      <div class="field">
-        <%= i.label :participant_Phone_Number %>
-        <%= i.text_field :phone_number %>
-      </div>
+        <div class="field">
+          <%= i.label "Participant_Name:" %>
+          <%= i.text_field :full_name %>
+        </div>
+        <div class="field">
+          <%= i.label "participant_Phone_Number:" %>
+          <%= i.text_field :phone_number %>
+        </div>
+        <br>
+      <% end %>
     <% end %>
+    <div class="actions">
+      <%= submit_tag %>
+    </div>
   <% end %>
-  <div class="actions">
-    <%= submit_tag %>
-  </div>
 <% end %>
