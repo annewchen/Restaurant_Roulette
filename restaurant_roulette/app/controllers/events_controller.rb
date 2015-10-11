@@ -15,16 +15,13 @@ class EventsController < ApplicationController
     event = Event.create(street_address: params[:event][:street_address])
     user.events << event
 
-    p "*" * 20
-
-=begin
     params["invitations"].each do |invitation|
       if invitation["full_name"] != "" || invitation["phone_number"] != ""
         invitation = Invitation.create(invitations_params(invitation))
-        event << invitation
+        event.invitations << invitation
       end
     end
-=end
+
 
     p "*" * 30
     p "In Create"
