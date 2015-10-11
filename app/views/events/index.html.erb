@@ -1,0 +1,22 @@
+<h1>Welcome, <%= @user.full_name %>!</h1>
+<p>You're probably getting hangry so let's send out some invites ASAP!</p>
+
+
+<%= form_for :event, url: events_path do |f| %>
+  <p>
+    <%= f.label "What address are you at currently?:" %><br>
+    <%= f.text_field :street_address %>
+  </p>
+
+  <h2>Guest List:</h2>
+
+  <div class="invitationSet">
+    <%= render partial: "invitation_form" %>
+  </div>
+
+  <a href="javascript:;" class="addInvitation">Add Guest</a>
+
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>
