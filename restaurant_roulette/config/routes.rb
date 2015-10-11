@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   resources :events, only: [:index, :new, :create]
-  resources :invitations, only: [:index, :create]
+  resources :invitations, only: [:index, :create, :new]
 
 
 

@@ -6,19 +6,26 @@ Hello, <%= @user.full_name %>!<br>
     <%= f.label :street_address %><br>
     <%= f.text_field :street_address %>
   </p>
-
-  <p>
-    <%= f.label :participant_Name %><br>
-    <%= f.text_field :alias %>
-  </p>
-
-  <p>
-    <%= f.label :participant_Phone_Number %><br>
-    <%= f.telephone_field :phone_number %>
-  </p>
-
   <p>
     <%= f.submit %>
   </p>
 <% end %>
 
+<%= form_tag invitations_path do %>
+  <% @invitations.each do |invitation| %>
+    <%= fields_for 'invitations[]', invitation do |i| %>
+
+      <div class="field">
+        <%= i.label :participant_Name %>
+        <%= i.text_field :full_name %>
+      </div>
+      <div class="field">
+        <%= i.label :participant_Phone_Number %>
+        <%= i.text_field :phone_number %>
+      </div>
+    <% end %>
+  <% end %>
+  <div class="actions">
+    <%= submit_tag %>
+  </div>
+<% end %>
