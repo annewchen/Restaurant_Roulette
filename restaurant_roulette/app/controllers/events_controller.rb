@@ -17,14 +17,20 @@ class EventsController < ApplicationController
       user.events << event
 
       params["invitations"].each do |invitation|
-        if invitation["full_name"] != "" || invitation["phone_number"] != ""
-          invitation = Invitation.create(invitations_params(invitation))
+        invitation = Invitation.new(invitations_params(invitation))
+        if invitation.save
           event.invitations << invitation
+        else
+          render "index"
         end
       end
-      render "submitted"
+      render "event_saved"
     else
       render "index"
+=begin
+  ERROR NOTE!!!! Not valid entries will cause error
+=end
+
     end
   end
 
