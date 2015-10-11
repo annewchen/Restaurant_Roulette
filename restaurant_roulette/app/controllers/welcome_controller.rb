@@ -17,7 +17,7 @@ class WelcomeController < ApplicationController
     params = { term: term,
            category_filter: category_filter,
            radius_filter: radius_filter,
-           sort: '2',
+           sort: '2'
          }
     @response = Yelp.client.search(location, params)
     @chosen_restaurant = @response.businesses.sample
