@@ -21,7 +21,7 @@ module TextMessagesHelper
     client.account.messages.create(
       :from => from,
       :to => event.planner.phone_number,
-      :body => "Hey #{event.planner.full_name}, We're going out for food. Fill out this form: http://restaurant-roullete.herokuapp.com/events/#{event.id}/preferences"
+      :body => "Hey #{event.planner.full_name}, yo I'm hangry. Let's grub. Fill out this form asap: http://restaurant-roullete.herokuapp.com/events/#{event.id}/preferences"
     )
     puts "Sent invitation message to planner: #{event.planner.full_name}"
   end
