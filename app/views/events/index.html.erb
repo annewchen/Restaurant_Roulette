@@ -10,13 +10,14 @@
 
   <h2>Guest List:</h2>
 
+  <button type="button" class="addInvitation">Add Guest</button><br>
   <div class="invitationSet">
     <%= render partial: "invitation_form" %>
   </div>
 
-  <a href="javascript:;" class="addInvitation">Add Guest</a>
+  <button type="button" id="deleteForm">Delete Guest</button>
 
   <div>
-    <%= f.submit %>
+    <%= f.submit "Send Invitations" %>
   </div>
 <% end %>
