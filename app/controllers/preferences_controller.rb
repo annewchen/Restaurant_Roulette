@@ -15,7 +15,10 @@ class PreferencesController < ApplicationController
     if @preference.cuisine == ""
       @preference.cuisine = nil
     end
-    meter_conversion(@preference.distance)
+
+    if @preference.distance != nil
+      meter_conversion(@preference.distance)
+    end
 
     values = [@preference.is_fancy, @preference.cuisine, @preference.is_vegetarian, @preference.distance]
 
