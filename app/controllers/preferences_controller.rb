@@ -99,7 +99,7 @@ class PreferencesController < ApplicationController
       p "*" * 20
       p "all choices: #{all_choices}"
       all_choices
-      selected_restaurant_hash = YelpHelper.ping_yelp(all_choices[:is_fancy all_choices[:cuisine], all_choices[:distance], all_choices[:is_vegetarian], event.street_address)
+      selected_restaurant_hash = YelpHelper.ping_yelp(all_choices[:is_fancy], all_choices[:cuisine], all_choices[:distance], all_choices[:is_vegetarian], event.street_address)
 
       p "selected restaurant: #{selected_restaurant_hash}"
 
