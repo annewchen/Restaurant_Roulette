@@ -10,14 +10,20 @@ class PreferencesController < ApplicationController
   end
 
   def create
+    p "*" * 20
+    p "In create"
     @event = Event.find_by(id: params[:event_id])
+    p "At A"
     @preference = Preference.new(preference_params)
+    p "At B"
     other_params
 
+    p "At C"
     if @preference.cuisine == ""
       @preference.cuisine = nil
     end
 
+    p "At D"
     if @preference.distance != nil
       meter_conversion(@preference.distance)
     end
@@ -30,7 +36,9 @@ class PreferencesController < ApplicationController
       end
     end
 
+    p "At E"
     if filter_count <= 2 && @preference.save
+        p "At F"
         render "thank"
     else
         flash[:notice] = "You can only pick 2 filters"
