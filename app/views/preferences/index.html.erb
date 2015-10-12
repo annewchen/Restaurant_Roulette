@@ -1,4 +1,4 @@
-<h1>You are invited to an event!</h1>
+<h1>You are invited to grab some food by, <%= User.find_by(id: @event.planner_id).full_name %>!</h1>
 
 <div id = "error"><%= flash[:notice] %></div>
 
