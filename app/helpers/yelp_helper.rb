@@ -44,6 +44,7 @@ module YelpHelper
    p params
    p location
     @response = Yelp.client.search(location, params)
+    p "number of matched restaurants: #{@response.businesses.count}"
     @chosen_restaurant = @response.businesses.sample
     #TODO FIX PHONE NUMBER ISSUE
     @chosen_restaurant_details = {
