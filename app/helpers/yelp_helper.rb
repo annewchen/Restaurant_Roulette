@@ -1,6 +1,12 @@
 module YelpHelper
   def YelpHelper.ping_yelp(is_fancy, category_filter, radius_filter, is_vegetarian, location)
     p "Inside ping yelp"
+    p "is_fancy: #{is_fancy}"
+    p "category_filter: #{category_filter}"
+    p "radius_filter: #{radius_filter}"
+    p "is_vegetarian: #{is_vegetarian}"
+    p "location: #{location}"
+
     params = {sort:'2'}
 
     term = "restaurants"
