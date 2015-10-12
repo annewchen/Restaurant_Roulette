@@ -17,6 +17,5 @@
 *.log
 /tmp
 
-
 # Ignore environment config file (contains api keys)
 /.env
