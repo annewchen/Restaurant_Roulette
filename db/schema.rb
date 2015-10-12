@@ -18,10 +18,12 @@ ActiveRecord::Schema.define(version: 20151010015022) do
 
   create_table "events", force: :cascade do |t|
     t.string   "street_address"
-    t.string   "selected_restaurant"
+    t.string   "selected_restaurant_name"
+    t.string   "selected_restaurant_address"
+    t.string   "selected_restaurant_phone_number"
     t.integer  "planner_id"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
   end
 
   create_table "invitations", force: :cascade do |t|
@@ -33,13 +35,12 @@ ActiveRecord::Schema.define(version: 20151010015022) do
   end
 
   create_table "preferences", force: :cascade do |t|
-    t.string   "price"
+    t.boolean  "is_fancy"
     t.string   "cuisine"
-    t.boolean  "good_for_groups"
-    t.boolean  "vegetarian"
+    t.boolean  "is_vegetarian"
     t.integer  "distance"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
     t.integer  "participant_id"
     t.integer  "event_id"
   end
