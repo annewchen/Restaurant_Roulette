@@ -9,35 +9,28 @@ class PreferencesController < ApplicationController
   end
 
   def create
-    p "IN CREATE"
-    p params
     event = Event.find_by(id: params[:event_id])
-    p "FOUND EVENT!!!"
-    p preference_params
-    p "AT A"
     @preference = Preference.new(preference_params)
-    p "AFTER Preference"
     other_params
-    p "AFTER OTHER PARAMS"
+
     if @preference.cuisine == ""
       @preference.cuisine = nil
     end
-    p "AFTER F"
+
     if @preference.distance != nil
       meter_conversion(@preference.distance)
     end
-    p "AFTER G"
+
     values = [@preference.is_fancy, @preference.cuisine, @preference.is_vegetarian, @preference.distance]
-    p "AFTER H"
+
     filter_count = 0
     values.each do |value|
       if value != nil
         filter_count+=1
       end
     end
-     p "BEFORE SAVE!!!!!"
+
     if filter_count <= 2 && @preference.save
-      p "SAVE IS WORKING!!!!!"
         render "thank"
     else
         flash[:notice] = "You can only pick 2 filters"
@@ -57,7 +50,6 @@ class PreferencesController < ApplicationController
 
     def other_params
       @preference.participant_id = current_user.id
-      p "WORKING IN other_params"
       @preference.event_id = params[:event_id]
     end
 
