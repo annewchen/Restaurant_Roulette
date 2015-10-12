@@ -27,7 +27,7 @@ class EventsController < ApplicationController
       end
 
         #text all invitees
-        # TextMessagesHelper.send_text_messages_to_invitees_and_planner(event)
+    TextMessagesHelper.send_text_messages_to_invitees_and_planner(event)
 
     else #else for event save
       render "index"
