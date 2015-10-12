@@ -38,8 +38,8 @@ class PreferencesController < ApplicationController
         render "index"
     end
 
- # CHANGE BACK TO ==
-    if event.preferences.count >= (event.invitations.count + 1)
+ # TODO:: CHANGE BACK TO ==
+    if event.preferences.count == (event.invitations.count + 1)
       decision_algorithm(event)
     end
   end
