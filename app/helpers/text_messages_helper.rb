@@ -39,7 +39,7 @@ module TextMessagesHelper
     client.account.messages.create(
       :from => from,
       :to => event.planner.phone_number,
-      :body => "Selected restaurant: #{event.selected_restaurant}"
+      :body => "Selected restaurant is #{event.selected_restaurant_name} located at #{event.selected_restaurant_address}"
     )
     puts "Sent final selection message to planner: #{event.planner.full_name}"
   end
