@@ -13,6 +13,8 @@ class PreferencesController < ApplicationController
     p params
     event = Event.find_by(id: params[:event_id])
     p "FOUND EVENT!!!"
+    p preference_params
+    p "AT A"
     @preference = Preference.new(preference_params)
     p "AFTER Preference"
     other_params
