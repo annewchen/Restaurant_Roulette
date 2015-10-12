@@ -2,6 +2,7 @@ require "yelp_helper"
 
 class PreferencesController < ApplicationController
   def index
+    @event = Event.find_by(id: params[:event_id])
   end
 
   def new
@@ -9,7 +10,7 @@ class PreferencesController < ApplicationController
   end
 
   def create
-    event = Event.find_by(id: params[:event_id])
+    @event = Event.find_by(id: params[:event_id])
     @preference = Preference.new(preference_params)
     other_params
 
@@ -22,7 +23,6 @@ class PreferencesController < ApplicationController
     end
 
     values = [@preference.is_fancy, @preference.cuisine, @preference.is_vegetarian, @preference.distance]
-
     filter_count = 0
     values.each do |value|
       if value != nil

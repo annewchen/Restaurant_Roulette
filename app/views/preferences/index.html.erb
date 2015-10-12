@@ -1,4 +1,4 @@
-<h1>You are invited to an event!</h1>
+ <h1>You are invited to grab some food by, <%= User.find_by(id: @event.planner_id).full_name %>!</h1>
 
 <div id = "error"><%= flash[:notice] %></div>
 
@@ -10,7 +10,7 @@
 
   <p>
     <%= f.label :cuisine %><br>
-    <%= f.select :cuisine, [['',''],['Japanese','japanese'],['Chinese','chinese'],['American','tradamerican'], ['Italian','italian'],['Indian','indpak']] %>
+    <%= f.select :cuisine, [['',''],['Japanese','japanese'],['Chinese','chinese'],['American','tradamerican'], ['Italian','italian'],['Indian','indpak'],['Mexican','mexican'],['Filipino','filipino'],['Thai','thai'],['Vietnamese','vietnamese'],['African','african'], ['Mediterranean','mediterranean'], ['Korean','korean'], ['German','german'], ['French','french'], ['Cuban','cuban'], ['Greek','greek']].sort %>
 
   </p>
 
