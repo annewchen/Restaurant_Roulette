@@ -32,8 +32,6 @@ class PreferencesController < ApplicationController
     end
 
     if filter_count <= 2 && @preference.save
-        p '***********************'
-        p @preference
         render "thank"
     else
         flash[:notice] = "You can only pick 2 filters"

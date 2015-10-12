@@ -21,6 +21,7 @@ class EventsController < ApplicationController
           event.invitations << invitation
           render "event_saved"
         else
+          flash[:notice] = "Please check guest name and phone number format"
           render "index"
         end
       end
