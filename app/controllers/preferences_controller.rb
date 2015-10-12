@@ -36,16 +36,10 @@ class PreferencesController < ApplicationController
         render "index"
     end
 
-    p "#" * 20
-    p event.preferences.count
-    p event.invitations.count
-
-=begin
-    until event.preferences.count event.invitations.count
+ # CHANGE BACK TO ==
+    if event.preferences.count == (event.invitations.count + 1)
       decision_algorithm(event)
     end
-=end
-
   end
 
   private
@@ -63,8 +57,52 @@ class PreferencesController < ApplicationController
     end
 
     def decision_algorithm(event)
-      p "working"
-      p "**************************"
+      all_choices = {
+        is_fancy: [],
+        cuisine: [],
+        distance: [],
+        is_vegetarian: []
+      }
+
+
+      #  Each "preference" is a hash of the user's selections, e.g.
+      #  {
+      #    "is_fancy" => true,
+      #    "cuisine" => "indian",
+      #    "distance" => 1000,
+      #    "is_vegetarian" => true,
+      #   }
+      #
+      # For a given choice (e.g. "cuisine"), collect
+      # all users' choices for cuisine and put them all
+      # in an array, specifically in all_choices["cuisine"]
+      #
+      event.preferences.each do |preference|
+
+        #iterate over all possible choices ("is_fancy", "cuisine", etc.)
+        all_choices.each do |choice, answers|
+          if preference[choice] != nil
+            answers << preference[choice]
+          end
+        end
+      end
+
+      # choosing one value for each choice and overwriting the hash
+      # before: all_choices[is_fancy] = [true, true, false]
+      # after: all_choices[is_fancy] = true
+      all_choices.each do |choice, answers|
+        all_choices[choice] = answers.sample
+      end
+
+
+      p "*" * 20
+      p "all choices: #{all_choices}"
+      all_choices
+       #selected_restaurant_hash = YelpHelper.ping_yelp(all_choices["is_fancy"], all_choices["cuisine"], all_choices["distance"], all_choices["is_vegetarian"], event.street_address)
+
+
+      # event.selected_restaurant = selected_
+      # send text message
     end
 
 end
