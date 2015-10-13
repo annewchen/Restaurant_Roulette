@@ -46,12 +46,16 @@ module YelpHelper
     p "number of matched restaurants: #{@response.businesses.count}"
 
     @chosen_restaurant = @response.businesses.sample
+    if @chosen_restaurant == nil
+      return nil
+    end
     @chosen_restaurant_details = {
       "name" => @chosen_restaurant.name,
       "phone" =>  @chosen_restaurant.has_key?(:phone) ? @chosen_restaurant.phone : '',
       "address" => @chosen_restaurant.location.address[0]
     }
     p "chosen restaurent details: #{@chosen_restaurant_details}"
-    @chosen_restaurant_details
+
+    return @chosen_restaurant_details
   end
 end
