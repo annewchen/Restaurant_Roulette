@@ -107,8 +107,6 @@ class PreferencesController < ApplicationController
       all_choices
       selected_restaurant_hash = YelpHelper.ping_yelp(all_choices[:is_fancy], all_choices[:cuisine], all_choices[:distance], all_choices[:is_vegetarian], event.street_address)
 
-      p selected_restaurant_hash["name"]
-
       if selected_restaurant_hash
         event.selected_restaurant_name = selected_restaurant_hash["name"]
         event.selected_restaurant_address = selected_restaurant_hash["address"]

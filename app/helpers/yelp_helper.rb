@@ -47,6 +47,7 @@ module YelpHelper
 
     @chosen_restaurant = @response.businesses.sample
     if @chosen_restaurant == nil
+      p "no match, returning nil restaurant"
       return nil
     end
     @chosen_restaurant_details = {
