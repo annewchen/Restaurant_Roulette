@@ -41,7 +41,7 @@ class PreferencesController < ApplicationController
         p "At F"
         render "thank"
     else
-        flash[:notice] = "You can only pick 2 filters"
+        flash[:filter] = "You can only pick 2 filters"
         render "index"
     end
 
