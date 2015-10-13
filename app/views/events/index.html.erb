@@ -4,18 +4,18 @@
 <div id = "error"><%= flash[:invitation_error] %></div>
 <%= form_for :event, url: events_path do |f| %>
   <p>
-    <%= f.label "What is your current location?:" %><br>
+    <%= f.label "What is your current location?" %></br>
     <%= f.text_field :street_address %>
   </p>
 
   <h2>Guest List:</h2>
 
-  <button type="button" class="addInvitation">Add Guest</button><br>
+  <button type="button" class="addInvitation">Add Guest</button></br>
   <div class="invitationSet">
     <%= render partial: "invitation_form" %>
   </div>
 
-  <button type="button" id="deleteForm">Delete Guest</button>
+  <button type="button" id="deleteForm">Delete Guest</button></br></br>
 
   <div>
     <%= f.submit "Send Invitations" %>
