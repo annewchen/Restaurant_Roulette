@@ -1,12 +1,11 @@
 $(document).ready(function(){
-  var newForm = "<div class = 'invitationForm'><p>Name: <input type='text' name='full_name[]' placeholder='John Doe'></input><br>Phone Number: <input type='text' name='phone_number[]' placeholder='xxx-xxx-xxxx'></input><button id='deleteForm'> Delete Guest</button><br></p></div>";
+  var newForm = $('.invitationForm').html();
   $('.addInvitation').click(function(){
-
-    $('.invitationSet').append(newForm);//.html());
+    $('.invitationSet').append("<div class = 'invitationForm'>" + newForm +"</div>");
   });
 
-  $(this).on("click","#deleteForm",function(){
-    console.log("hit")
-    $('.invitationForm').last().remove();
+  $(this).on("click","#deleteForm",function(e){
+    e.preventDefault();
+    $(this).parent().remove();
     });
 });
