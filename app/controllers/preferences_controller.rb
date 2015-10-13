@@ -113,7 +113,7 @@ class PreferencesController < ApplicationController
 
       event.selected_restaurant_name = selected_restaurant_hash["name"]
       event.selected_restaurant_address = selected_restaurant_hash["address"]
-
+      event.selected_restaurant_phone_number = selected_restaurant_hash["phone"]
       event.save
 
       TextMessagesHelper.send_final_selection_to_planner(event)
