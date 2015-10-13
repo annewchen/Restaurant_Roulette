@@ -40,16 +40,18 @@ module YelpHelper
     #        sort: '2'
     #         }
 
-   p "PEEING OUT PARAMS"
    p params
    p location
     @response = Yelp.client.search(location, params)
     p "number of matched restaurants: #{@response.businesses.count}"
     @chosen_restaurant = @response.businesses.sample
-    #TODO FIX PHONE NUMBER ISSUE
+    @response.businesses.each do |business|
+      p business.phone
+    end
+
     @chosen_restaurant_details = {
       "name" => @chosen_restaurant.name,
-      # "phone" => @chosen_restaurant.phone,
+      "phone" => @chosen_restaurant.phone,
       "address" => @chosen_restaurant.location.address[0]
     }
     p "chosen restaurent details: #{@chosen_restaurant_details}"
