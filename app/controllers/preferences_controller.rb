@@ -18,7 +18,7 @@ class PreferencesController < ApplicationController
     p "At A"
     @preference = Preference.new(preference_params)
     p "At B"
-    other_params
+    @preference.event_id = params[:event_id]
 
     p "At C"
     if @preference.cuisine == ""
@@ -56,11 +56,6 @@ class PreferencesController < ApplicationController
   private
     def preference_params
       params.require(:preference).permit(:is_fancy, :cuisine, :distance, :is_vegetarian)
-    end
-
-    def other_params
-      @preference.participant_id = current_user.id
-      @preference.event_id = params[:event_id]
     end
 
     def meter_conversion(miles)
