@@ -1,6 +1,6 @@
  <h1>You are invited to grab some food by, <%= User.find_by(id: @event.planner_id).full_name %>!</h1>
 
-<div id = "error"><%= flash[:notice] %></div>
+<div id = "error"><%= flash[:filter] %></div>
 
 <%= form_for :preference do |f| %>
   <p>
