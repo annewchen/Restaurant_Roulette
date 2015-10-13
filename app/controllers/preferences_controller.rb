@@ -2,6 +2,7 @@ require "yelp_helper"
 
 class PreferencesController < ApplicationController
   def index
+    @event = Event.find_by(id: params[:event_id])
   end
 
   def new
@@ -9,21 +10,25 @@ class PreferencesController < ApplicationController
   end
 
   def create
-    event = Event.find_by(id: params[:event_id])
-
+    p "*" * 20
+    p "In create"
+    @event = Event.find_by(id: params[:event_id])
+    p "At A"
     @preference = Preference.new(preference_params)
+    p "At B"
     other_params
 
+    p "At C"
     if @preference.cuisine == ""
       @preference.cuisine = nil
     end
 
+    p "At D"
     if @preference.distance != nil
       meter_conversion(@preference.distance)
     end
 
     values = [@preference.is_fancy, @preference.cuisine, @preference.is_vegetarian, @preference.distance]
-
     filter_count = 0
     values.each do |value|
       if value != nil
@@ -31,7 +36,9 @@ class PreferencesController < ApplicationController
       end
     end
 
+    p "At E"
     if filter_count <= 2 && @preference.save
+        p "At F"
         render "thank"
     else
         flash[:notice] = "You can only pick 2 filters"
@@ -39,8 +46,8 @@ class PreferencesController < ApplicationController
     end
 
  # TODO:: CHANGE BACK TO ==
-    if event.preferences.count == (event.invitations.count + 1)
-      decision_algorithm(event)
+    if @event.preferences.count == (@event.invitations.count + 1)
+      decision_algorithm(@event)
     end
   end
 
@@ -100,7 +107,7 @@ class PreferencesController < ApplicationController
       p "*" * 20
       p "all choices: #{all_choices}"
       all_choices
-      selected_restaurant_hash = YelpHelper.ping_yelp(all_choices["is_fancy"], all_choices["cuisine"], all_choices["distance"], all_choices["is_vegetarian"], event.street_address)
+      selected_restaurant_hash = YelpHelper.ping_yelp(all_choices[:is_fancy], all_choices[:cuisine], all_choices[:distance], all_choices[:is_vegetarian], event.street_address)
 
       p "selected restaurant: #{selected_restaurant_hash}"
 

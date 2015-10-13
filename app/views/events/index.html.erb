@@ -1,22 +1,23 @@
 <h1>Welcome, <%= @user.full_name %>!</h1>
 <p>You're probably getting hangry so let's send out some invites ASAP!</p>
 
-
+<div id = "error"><%= flash[:notice] %></div>
 <%= form_for :event, url: events_path do |f| %>
   <p>
-    <%= f.label "What address are you at currently?:" %><br>
+    <%= f.label "What is your current location?:" %><br>
     <%= f.text_field :street_address %>
   </p>
 
   <h2>Guest List:</h2>
 
+  <button type="button" class="addInvitation">Add Guest</button><br>
   <div class="invitationSet">
     <%= render partial: "invitation_form" %>
   </div>
 
-  <a href="javascript:;" class="addInvitation">Add Guest</a>
+  <button type="button" id="deleteForm">Delete Guest</button>
 
   <div>
-    <%= f.submit %>
+    <%= f.submit "Send Invitations" %>
   </div>
 <% end %>
