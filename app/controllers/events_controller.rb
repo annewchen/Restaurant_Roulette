@@ -8,12 +8,12 @@ class EventsController < ApplicationController
 
   def create
     @user = User.find_by(id: current_user.id)
-    participant_count = params[:full_name].count
     @event = Event.new(street_address: params[:event][:street_address])
 
-    if @event.save
+    if @event.save && params[:full_name] && params[:phone_number]
       @user.events << @event
       index = 0
+      participant_count = params[:full_name].count
       participant_count.times do
         invitation = Invitation.new(full_name: params[:full_name][index], phone_number: params[:phone_number][index])
         if invitation.save
