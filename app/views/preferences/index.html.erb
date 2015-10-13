@@ -4,8 +4,8 @@
 
 <%= form_for :preference do |f| %>
   <p>
-    <%= f.label :is_fancy %><br>
-    <%= f.select :is_fancy, [['',''],['true','true'],['false','false']] %>
+    <%= f.label :price %><br>
+    <%= f.select :is_fancy, [['',''],['Inexpensive','false'],['Pricey','true']] %>
 
   </p>
 
@@ -16,13 +16,13 @@
   </p>
 
   <p>
-    <%= f.label :is_vegetarian %><br>
-    <%= f.select :is_vegetarian, [['',''],['true','true'],['false','false']] %>
+    <%= f.label :vegetarian %><br>
+    <%= f.select :is_vegetarian, [['',''],['True','true'],['False','false']] %>
   </p>
 
   <p>
     <%= f.label :distance %><br>
-    <%= f.select :distance, [['',''],['1 mile','1 mile'],['2 miles','2 miles'],['5 miles','5 miles'], ['10 miles','10 miles']] %>
+    <%= f.select :distance, [['',''],['1 mile','1 mile'],['2 miles','2 miles'],['5 miles','5 miles'], ['10 miles','10 miles'],['15 miles','15 miles'],['25 miles','25 miles']] %>
   </p>
 
   <p>
