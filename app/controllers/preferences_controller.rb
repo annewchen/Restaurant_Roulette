@@ -1,6 +1,8 @@
 require "yelp_helper"
 
 class PreferencesController < ApplicationController
+  before_filter :authenticate_user!, except: [:index, :create]
+
   def index
     @event = Event.find_by(id: params[:event_id])
   end
