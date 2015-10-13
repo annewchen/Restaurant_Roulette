@@ -20,13 +20,13 @@ class EventsController < ApplicationController
           index+=1
           @event.invitations << invitation
         else
-          flash[:notice] = "Please check guest name and phone number format"
+          flash.now[:invitation_error] = "Please check guest name and phone number format"
           break
         end
       end
 
 
-      if flash[:notice]  # there was a problem
+      if flash[:invitation_error]  # there was a problem
           render "index"
       else
         #text all invitees
