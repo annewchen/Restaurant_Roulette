@@ -4,7 +4,7 @@ $(document).ready(function(){
     $('.invitationSet').append(newForm);
   });
 
-  $(this).on("click","#deleteForm",function(e){
+  $(this).on("click","#deleteButton",function(e){
     e.preventDefault();
     $(this).parent().remove();
     });
