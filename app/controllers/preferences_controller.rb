@@ -48,7 +48,7 @@ class PreferencesController < ApplicationController
     end
 
  # TODO:: CHANGE BACK TO ==
-    if @event.preferences.count >= (@event.invitations.count + 1)
+    if @event.preferences.count == (@event.invitations.count + 1)
       decision_algorithm(@event)
     end
   end
@@ -103,8 +103,6 @@ class PreferencesController < ApplicationController
       p "all choices: #{all_choices}"
       all_choices
       selected_restaurant_hash = YelpHelper.ping_yelp(all_choices[:is_fancy], all_choices[:cuisine], all_choices[:distance], all_choices[:is_vegetarian], event.street_address)
-
-      p selected_restaurant_hash["name"]
 
       if selected_restaurant_hash
         event.selected_restaurant_name = selected_restaurant_hash["name"]
