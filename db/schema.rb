@@ -39,9 +39,8 @@ ActiveRecord::Schema.define(version: 20151010015022) do
     t.string   "cuisine"
     t.boolean  "is_vegetarian"
     t.integer  "distance"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-    t.integer  "participant_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.integer  "event_id"
   end
 
