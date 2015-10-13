@@ -19,16 +19,20 @@ class EventsController < ApplicationController
         if invitation.save
           index+=1
           @event.invitations << invitation
-          render "event_saved"
         else
           flash[:notice] = "Please check guest name and phone number format"
-          render "index"
+          break
         end
       end
 
-        #text all invitees
-    TextMessagesHelper.send_text_messages_to_invitees_and_planner(@event)
 
+      if flash[:notice]  # there was a problem
+          render "index"
+      else
+        #text all invitees
+        TextMessagesHelper.send_text_messages_to_invitees_and_planner(@event)
+        render "event_saved"
+      end
     else #else for event save
       render "index"
 
