@@ -34,6 +34,7 @@ class EventsController < ApplicationController
         render "event_saved"
       end
     else #else for event save
+      flash.now[:event_error] = "You need to enter a location and invite at least one person"
       render "index"
 
     end #end for if event.save
