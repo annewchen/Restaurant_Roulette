@@ -1,7 +1,7 @@
 $(document).ready(function(){
-  var newForm = $('.invitationForm').html();
+  var newForm = $('.invitationSet').html();
   $('.addInvitation').click(function(){
-    $('.invitationSet').append("<div class = 'invitationForm'>" + newForm +"</div>");
+    $('.invitationSet').append(newForm);
   });
 
   $(this).on("click","#deleteForm",function(e){
