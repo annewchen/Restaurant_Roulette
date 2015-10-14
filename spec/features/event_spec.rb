@@ -1,3 +1,8 @@
+require 'spec_helper'
+  Capybara.register_driver :selenium do |app|
+    Capybara::Selenium::Driver.new(app, :browser => :chrome)
+  end
+
 describe 'The creating an event process', js: true  do
   context 'Create an event' do
 
