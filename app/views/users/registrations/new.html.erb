@@ -9,13 +9,13 @@
   </div>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+    <%= f.label :phone_number %><br />
+    <%= f.text_field :phone_number%>
   </div>
 
   <div class="field">
-    <%= f.label :phone_number %><br />
-    <%= f.text_field :phone_number%>
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
   </div>
 
   <div class="field">
@@ -26,14 +26,8 @@
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
 <% end %>
 
-<%= render "users/shared/links" %>
