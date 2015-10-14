@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'welcome/index'
+
   get 'preferences/index'
 
   devise_for :users, :skip => [:events]
