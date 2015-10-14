@@ -12,6 +12,8 @@ Allowing groups to make a quick restaurant choice. Every member of the group get
 ## [Slice](https://workflowy.com/s/rtvlppbKxh)
 ![Slice](./project_guide/imgs/slices.png)
 
+## [Wiki] (https://workflowy.com/s/E0UMefvCnM)
+
 ## [Git Workflow](https://gist.github.com/mikelikesbikes/ccbf4c7fd90e647138c6)
 ###Set Up
 
