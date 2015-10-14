@@ -2,6 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#error {
-  color: red;
+.option {
+  text-align: center;
+  font-size: 3em;
 }
+
+#preference_is_fancy {
+}
+
+.preferences {
+  margin:15em auto 15em auto;
+}
+
