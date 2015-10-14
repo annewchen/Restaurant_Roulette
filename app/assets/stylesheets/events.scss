@@ -8,8 +8,22 @@
 *******************************/
 #slide1{
     background-color:#5c9900;
-
 }
+
+#p1{
+    padding-top: 3%;
+}
+
+#header{
+  font-family: 'Raleway', sans-serif;
+  color:#ffffff;
+  font-size:5em;
+  margin-top:0%;
+  padding-top: 10%;
+  font-weight: 550;
+}
+
+
 /******************************
  SLIDE 2
 *******************************/
@@ -18,6 +32,15 @@
 
 }
 
+#globe{
+    left: 80%;
+    top: 15%;
+}
+
+#p2{
+    padding-top: 3%;
+    color:#808080;
+}
 
 #slide2 img:first-child{
     position:absolute;
@@ -132,6 +155,8 @@ html,body{
     width:100%;
     height:100%;
     position: relative;
+    font-family: 'Raleway', sans-serif;
+    color:#ffffff;
     box-shadow:inset 0px 10px 10px rgba(0,0,0,0.3);
 }
 
@@ -150,3 +175,13 @@ html,body{
     background-color:#494949;
     cursor:pointer;
 }
+
+p{
+  font-size:3.5em;
+  text-align:center;
+  padding-right: 15%;
+  padding-left: 15%;
+}
+
+
+
