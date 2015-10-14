@@ -4,10 +4,12 @@
 <div id = "error"><%= flash[:invitation_error] %></div>
 <div id = "error"><%= flash[:event_error] %></div>
 <%= form_for :event, url: events_path do |f| %>
-  <p>
-    <%= f.label "What is your current location?" %></br>
-    <%= f.text_field :street_address %>
-  </p>
+  <div class = "field">
+    <p>
+      <%= f.label "What is your current location?" %></br>
+      <%= f.text_field :street_address %>
+    </p>
+  </div>
 
   <h2>Guest List:</h2>
 
