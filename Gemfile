@@ -27,6 +27,10 @@ gem 'twilio-ruby'
 gem 'dotenv-rails'
 gem 'heroku'
 gem 'yelp', require: 'yelp'
+gem 'normalize-rails'
+gem 'jquery-easing-rails'
+gem 'waypoints_rails'
+gem 'stellar-js-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

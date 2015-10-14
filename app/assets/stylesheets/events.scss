@@ -1,3 +1,152 @@
 // Place all the styles related to the events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/******************************
+ SLIDE 1
+*******************************/
+#slide1{
+    background-color:#5c9900;
+
+}
+/******************************
+ SLIDE 2
+*******************************/
+#slide2{
+    background-color:#005c99;
+
+}
+
+
+#slide2 img:first-child{
+    position:absolute;
+top: 700px;
+left: -150px;
+}
+#slide2 img:nth-child(2){
+    position:absolute;
+    top:300px;
+    left:100px;
+}
+#slide2 img:nth-child(3){
+    position:absolute;
+    top:600px;
+    left:300px;
+}
+#slide2 img:nth-child(4){
+    position:absolute;
+    top:400px;
+    left:300px;
+}
+#slide2 img:nth-child(5){
+    position:absolute;
+    top:600px;
+    right:300px;
+}
+#slide2 img:nth-child(6){
+    position:absolute;
+    top:600px;
+    right:300px;
+}
+#slide2 img:nth-child(7){
+    position:absolute;
+    top:400px;
+    right:100px;
+}
+#slide2 img:nth-child(8){
+    position:absolute;
+    top:100px;
+    right:300px;
+}
+
+
+/****************************** SLIDE 3 *******************************/
+#slide3 {
+    background-color:#b6c10b;
+}
+#slide3 img:first-child {
+    position:absolute;
+    top: 700px;
+    left: 300px;
+}
+#slide3 img:nth-child(2){
+    position:absolute;
+    top:100px;
+    left:100px;
+}
+#slide3 img:nth-child(3){
+    position:absolute;
+    top:150px;
+    left:300px;
+}
+#slide3 img:nth-child(4){
+    position:absolute;
+    top:450px;
+    left:300px;
+}
+#slide3 img:nth-child(5){
+    position:absolute;
+    top:200px;
+    right:300px;
+}
+#slide3 img:nth-child(6){
+    position:absolute;
+    top:100px;
+    right:300px;
+}
+
+html,body{
+    font-family: Tahoma;
+    width:100%;
+    height:100%;
+
+}
+
+.navigation {
+    position:fixed;
+    z-index:1;
+    top:20px;
+}
+.navigation li {
+    color:#333333;
+    display:block;
+    padding: 0 10px;
+    line-height:30px;
+    margin-bottom:2px;
+    font-weight:bold;
+    -webkit-transition: all .2s ease-in-out;
+    border-bottom:1px solid black;
+    text-align:left;
+    width:53px;
+}
+.navigation li:hover,
+.active {
+    font-size:25px;
+    cursor:pointer;
+    width:100px!important;
+}
+
+.slide {
+    background-attachment: fixed;
+    width:100%;
+    height:100%;
+    position: relative;
+    box-shadow:inset 0px 10px 10px rgba(0,0,0,0.3);
+}
+
+.button{
+    display:block;
+    width:50px;
+    height:50px;
+    position:absolute;
+    bottom:0px;
+    left:50%;
+    background-color:#333333;
+    background-image:url(arrow.png);
+    background-repeat:no-repeat;
+}
+.button:hover{
+    background-color:#494949;
+    cursor:pointer;
+}

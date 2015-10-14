@@ -1,3 +1,10 @@
+<ul class="navigation">
+    <li class="active" data-slide="1">Location</li>
+    <li class="" data-slide="2">Choose Your Friends</li>
+    <li class="" data-slide="3">Send Invitations</li>
+</ul>
+<div class="slide" id="slide1" data-slide="1" data-stellar-background-ratio="0.5">
+
 <h1>Welcome, <%= @user.full_name %>!</h1>
 <p>You're probably getting hangry so let's send out some invites ASAP!</p>
 
@@ -10,15 +17,26 @@
       <%= f.text_field :street_address %>
     </p>
   </div>
+  <a class="button" data-slide="2" title=""></a>
+</div><!--End Slide 1-->
 
+
+
+<div class="slide" id="slide2" data-slide="2" data-stellar-background-ratio="0.5">
+  <br>
   <h2>Guest List:</h2>
 
   <button type="button" class="addInvitation">Add Guest</button></br>
   <div class="invitationSet">
     <%= render partial: "invitation_form" %>
   </div>
+<a class="button" data-slide="3" title=""></a>
+</div><!--End Slide 2-->
 
-  <div>
+
+
+<div class="slide" id="slide3" data-slide="3" data-stellar-background-ratio="0.5">
     <%= f.submit "Send Invitations" %>
-  </div>
 <% end %>
+</div><!--End Slide 3-->
+

@@ -12,6 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.stellar
+//= require jquery.waypoints
+//= require jquery.easing
 //= require turbolinks
 //= require_tree .
 
