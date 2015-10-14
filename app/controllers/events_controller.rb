@@ -4,6 +4,7 @@ class EventsController < ApplicationController
   def index
     session[:user_id] = current_user.id
     @user = User.find_by(id: session[:user_id])
+    @phone_book = contact_list(@user)
   end
 
   def create
@@ -30,7 +31,7 @@ class EventsController < ApplicationController
           render "index"
       else
         #text all invitees
-        TextMessagesHelper.send_text_messages_to_invitees_and_planner(@event)
+        # TextMessagesHelper.send_text_messages_to_invitees_and_planner(@event)
         render "event_saved"
       end
     else #else for event save
@@ -44,4 +45,19 @@ class EventsController < ApplicationController
     my_params.permit(:full_name, :phone_number)
   end
 
+  private
+    def contact_list(user)
+       phone_book = {}
+       user.events.each do |event|
+         event.invitations.each do |invitation|
+           if phone_book[invitation.phone_number] != invitation.full_name
+             phone_book[invitation.phone_number] = invitation.full_name
+           end
+         end
+       end
+       phone_book
+    end
 end
+
+
+
