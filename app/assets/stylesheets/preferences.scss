@@ -2,16 +2,34 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.option {
+body{
+  font-family: 'Raleway', sans-serif;
   text-align: center;
+}
+.navbar-text{
+  font-size: 1.5em;
+  text-align: left;
+}
+
+p{
+  font-size: 2.5em;
+  margin-bottom: 0em;
+}
+
+h1{
   font-size: 3em;
+  magin-top: 0em;
+}
+
+#error {
+  color: red;
+}
+
+form{
+  margin-top: -12em;
 }
 
 label {
-  font-size: 1.5em;
-}
-
-submit {
   font-size: 1.5em;
 }
 
@@ -23,10 +41,16 @@ select {
   font-size: 1em;
 }
 
+.option {
+  text-align: center;
+  font-size: 2.5em;
+  padding: .5em;
+}
 
 .btn {
   background-color: grey;
   font-size: 1em;
+  margin-top: 4em;
 }
 
 .preferences {
