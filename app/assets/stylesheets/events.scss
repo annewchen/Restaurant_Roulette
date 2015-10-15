@@ -2,6 +2,84 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.addInvitation {
+  border-radius: 50px;
+  font-family: 'Raleway', sans-serif;
+  color: #e68443;
+  font-size: 3em;
+  background: #ffffff;
+  padding: 5px 10px 5px 10px;
+  border: solid #e68443 5px;
+  text-decoration: none;
+  width:30%;
+  margin-left:35%;
+
+}
+
+
+#deleteButton {
+  border-radius: 50px;
+  font-family: 'Raleway', sans-serif;
+  color: #e68443;
+  font-size: 0.7em;
+  background: #ffffff;
+  padding: 5px 10px 5px 10px;
+  border: solid #e68443 5px;
+  text-decoration: none;
+  width:20%;
+}
+
+
+.invitationForm{
+  margin-top:2%;
+}
+
+
+#buttonInvite {
+  -webkit-border-radius: 34;
+  -moz-border-radius: 34;
+  border-radius: 50px;
+  font-family: 'Raleway', sans-serif;
+  color: #e68443;
+  font-size: 5em;
+  background: #ffffff;
+  padding: 30px 80px 30px 80px;
+  border: solid #e68443 5px;
+  text-decoration: none;
+  position:absolute;
+  width:50%;
+  margin-top:15%;
+  margin-left:25%;
+  margin-right:25%;
+}
+
+#buttonInvite:hover {
+  background: #ffffff;
+  text-decoration: none;
+}
+
+
+#buttonInvite{
+-moz-transition: all 1s ease-in-out;
+-webkit-transition: all 1s ease-in-out;
+-o-transition: all 1s ease-in-out;
+-ms-transition: all 1s ease-in-out;
+transition: all 1s ease-in-out;
+}
+
+#buttonInvite:hover{
+-moz-transform: rotate(360deg);
+-webkit-transform: rotate(360deg);
+-o-transform: rotate(360deg);
+-ms-transform: rotate(360deg);
+transform: rotate(360deg);
+}
+
+
+
+
+
+
 
 /******************************
  SLIDE 1
@@ -12,6 +90,10 @@
 
 #p1{
     padding-top: 3%;
+    font-size:3.5em;
+    text-align:center;
+    padding-right: 15%;
+    padding-left: 15%;
 }
 
 #header{
@@ -21,6 +103,19 @@
   margin-top:0%;
   padding-top: 10%;
   font-weight: 550;
+  text-align:center;
+  padding-right: 15%;
+  padding-left: 15%;
+}
+
+#header2{
+font-family: 'Raleway', sans-serif;
+  color:#ffffff;
+  font-size:4.5em;
+  font-weight: 550;
+  text-align:center;
+  padding-right: 15%;
+  padding-left: 15%;
 }
 
 
@@ -32,15 +127,54 @@
 
 }
 
+
 #globe{
-    left: 80%;
-    top: 15%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#mail{
+    margin-left: 10%;
+    margin-top: 20%;
 }
 
 #p2{
-    padding-top: 3%;
+    padding-top: 1%;
     color:#808080;
+    font-size:3.5em;
+    text-align:center;
+    padding-right: 15%;
+    padding-left: 15%;
+
 }
+
+#p3{
+    font-size:1em;
+    text-align:center;
+    padding-right: 15%;
+    padding-left: 15%;
+    font-family: 'Raleway', sans-serif;
+    color:#ffffff;
+}
+
+
+
+#newFriend{
+  font-size:1em;
+}
+
+
+
+#field_invites{
+  position:relative;
+  width:70%;
+  left:15%;
+}
+
+
+
+
 
 #slide2 img:first-child{
     position:absolute;
@@ -85,6 +219,11 @@ left: -150px;
 
 
 /****************************** SLIDE 3 *******************************/
+
+#invites{
+   font-size:2em;
+}
+
 #slide3 {
     background-color:#b6c10b;
 }
@@ -118,6 +257,12 @@ left: -150px;
     top:100px;
     right:300px;
 }
+
+
+#slide4 {
+    background-color:orange;
+}
+
 
 html,body{
     font-family: Tahoma;
@@ -176,12 +321,7 @@ html,body{
     cursor:pointer;
 }
 
-p{
-  font-size:3.5em;
-  text-align:center;
-  padding-right: 15%;
-  padding-left: 15%;
-}
+
 
 
 

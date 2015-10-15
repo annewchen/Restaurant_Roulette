@@ -1,6 +1,7 @@
 
 $(document).ready(function(){
   var newForm = $('.invitationSet').html();
+
   $('.addInvitation').click(function(){
     $('.invitationSet').append(newForm);
   });
