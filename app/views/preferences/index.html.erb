@@ -3,7 +3,7 @@
     <div class="page" id="preference-page">
       <h1 class="preference-title">Restaurant Roulette</h1></br>
       <p class="title">Grab some grub with:</p>
-      <h2 id="vote-header"><%= User.find_by(id: @event.planner_id).full_name %>!</h2></br>
+      <h2 id="vote-header"><%= User.find_by(id: @event.planner_id).full_name %> in <%=@event.street_address%>!</h2></br>
       <h4 id="filter-warning">Please fill out 2 filters only</h4>
 
       <div id = "error"><%= flash[:filter] %></div>
