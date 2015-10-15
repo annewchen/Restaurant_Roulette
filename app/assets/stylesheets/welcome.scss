@@ -2,20 +2,25 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#home {
-  text-align:center;
-  margin:12em auto 12em auto;
+ #home {
+   text-align:center;
+   margin:12em auto 12em auto;
 }
 
+
 div#home.page.welcome{
-  background-size: cover;
-  height: 45em;
-  margin-top: 0px;
   border: 0px;
+  margin-top: 0px;
   margin-bottom: 0px;
-  background: url(food.jpg);
-  background-repeat: no-repeat;
-  overflow: hidden;
+  background-image:url("food.jpg");
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  overflow:hidden;
+  background-size: cover;
+
 }
 
 #homeTitle{
