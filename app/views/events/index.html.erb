@@ -2,11 +2,14 @@
 <p>You're probably getting hangry so let's send out some invites ASAP!</p>
 
 <div id = "error"><%= flash[:invitation_error] %></div>
+<div id = "error"><%= flash[:event_error] %></div>
 <%= form_for :event, url: events_path do |f| %>
-  <p>
-    <%= f.label "What is your current location?" %></br>
-    <%= f.text_field :street_address %>
-  </p>
+  <div class = "field">
+    <p>
+      <%= f.label "What is your current location?" %></br>
+      <%= f.text_field :street_address %>
+    </p>
+  </div>
 
   <h2>Guest List:</h2>
 
@@ -14,8 +17,6 @@
   <div class="invitationSet">
     <%= render partial: "invitation_form" %>
   </div>
-
-  <button type="button" id="deleteForm">Delete Guest</button></br></br>
 
   <div>
     <%= f.submit "Send Invitations" %>

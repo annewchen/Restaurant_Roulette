@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   get 'preferences/index'
 
-  devise_for :users
+  devise_for :users, :skip => [:events]
+
   get 'events/index'
 
   # The priority is based upon order of creation: first created -> highest priority.

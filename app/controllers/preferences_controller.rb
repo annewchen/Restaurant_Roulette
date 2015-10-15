@@ -1,6 +1,8 @@
 require "yelp_helper"
 
 class PreferencesController < ApplicationController
+  before_filter :authenticate_user!, except: [:index, :create]
+
   def index
     @event = Event.find_by(id: params[:event_id])
   end
@@ -16,7 +18,7 @@ class PreferencesController < ApplicationController
     p "At A"
     @preference = Preference.new(preference_params)
     p "At B"
-    other_params
+    @preference.event_id = params[:event_id]
 
     p "At C"
     if @preference.cuisine == ""
@@ -54,11 +56,6 @@ class PreferencesController < ApplicationController
   private
     def preference_params
       params.require(:preference).permit(:is_fancy, :cuisine, :distance, :is_vegetarian)
-    end
-
-    def other_params
-      @preference.participant_id = current_user.id
-      @preference.event_id = params[:event_id]
     end
 
     def meter_conversion(miles)
@@ -103,20 +100,23 @@ class PreferencesController < ApplicationController
         all_choices[choice] = answers.sample
       end
 
-
-      p "*" * 20
       p "all choices: #{all_choices}"
       all_choices
       selected_restaurant_hash = YelpHelper.ping_yelp(all_choices[:is_fancy], all_choices[:cuisine], all_choices[:distance], all_choices[:is_vegetarian], event.street_address)
 
+      if selected_restaurant_hash
+        event.selected_restaurant_name = selected_restaurant_hash["name"]
+        event.selected_restaurant_address = selected_restaurant_hash["address"]
+        event.selected_restaurant_phone_number = selected_restaurant_hash["phone"]
+        event.save
+        TextMessagesHelper.send_final_selection_to_planner(event)
+      else
+        TextMessagesHelper.send_no_results_message(event)
+      end
+
+
       p "selected restaurant: #{selected_restaurant_hash}"
 
-      event.selected_restaurant_name = selected_restaurant_hash["name"]
-      event.selected_restaurant_address = selected_restaurant_hash["address"]
-
-      event.save
-
-      TextMessagesHelper.send_final_selection_to_planner(event)
     end
 
 end
