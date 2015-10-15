@@ -1,22 +1,23 @@
 <%= render partial: "navbar" %>
+<br>
 <div class="page container">
-  <h2>Edit Profile</h2>
-  <div class="home">
+  <p id="edit">Edit Profile</p>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
       <%= devise_error_messages! %>
+    <div class="edit_page">
       <div class="field">
          <%= f.label :full_name %></br>
-         <%= f.text_field :full_name%>
+         <%= f.text_field :full_name, :class => "style_field"%>
       </div>
 
       <div class="field">
          <%= f.label :email %></br>
-         <%= f.email_field :email, autofocus: true %>
+         <%= f.email_field :email, autofocus: true, :class => "style_field" %>
       </div>
 
       <div class="field">
          <%= f.label :phone_number %></br>
-         <%= f.text_field :phone_number%>
+         <%= f.text_field :phone_number, :class => "style_field"%>
       </div>
 
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -25,21 +26,23 @@
 
       <div class="field">
         <%= f.label :new_password %> <i>(leave blank if you don't want to change it)</i></br>
-        <%= f.password_field :password, autocomplete: "off" %>
+        <%= f.password_field :password, autocomplete: "off", :class => "style_field" %>
       </div>
 
       <div class="field">
         <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i></br>
-        <%= f.password_field :current_password, autocomplete: "off" %>
+        <%= f.password_field :current_password, autocomplete: "off", :class => "style_field" %>
       </div>
 
       <div class="actions">
-        <%= f.submit "Update" %>
+        <%= f.submit "Update", :id => 'editbutton' %>
       </div>
     <% end %>
 
     <div class="cancel_acct">
-      <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
+      <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, :id => 'editbutton' %>
     </div>
   </div>
 </div>
+
+

@@ -1,17 +1,17 @@
 <%= render partial: "navbar" %>
-
+<br>
 <div class="page container">
-  <h2>Log in</h2>
-  <div class="home">
+  <p id="loginheader">Log in</p>
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="login">
       <div class="field">
         <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true %>
+        <%= f.email_field :email, autofocus: true, :class => "style_field" %>
       </div>
 
       <div class="field">
         <%= f.label :password %><br />
-        <%= f.password_field :password, autocomplete: "off" %>
+        <%= f.password_field :password, autocomplete: "off", :class => "style_field" %>
       </div>
 
       <% if devise_mapping.rememberable? -%>
@@ -22,7 +22,7 @@
       <% end -%>
 
       <div class="actions">
-        <%= f.submit "Log in" %>
+        <%= f.submit "Log in", :id => 'loginbutton'%>
       </div>
     <% end %>
   </div>
