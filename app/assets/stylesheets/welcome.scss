@@ -7,3 +7,18 @@
   margin:12em auto 12em auto;
 }
 
+div#home.page.welcome{
+  background-size: cover;
+  height: 930px;
+  margin-top: 0px;
+  border: 0px;
+  margin-bottom: 0px;
+  background: url(food.jpg);
+}
+
+#homeTitle{
+  font-size:12em;
+  color:#ffffff;
+  text-shadow: 4px 4px 4px #000000;
+  margin-top:1em;
+}
