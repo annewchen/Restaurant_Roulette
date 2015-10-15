@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 .addInvitation {
   border-radius: 50px;
   font-family: 'Raleway', sans-serif;
@@ -76,11 +77,6 @@ transform: rotate(360deg);
 }
 
 
-
-
-
-
-
 /******************************
  SLIDE 1
 *******************************/
@@ -113,8 +109,6 @@ transform: rotate(360deg);
   color:#ffffff;
   font-size:5em;
   text-align:center;
-  padding-right: 15%;
-  padding-left: 20%;
   font-weight:normal;
 }
 
@@ -127,6 +121,9 @@ transform: rotate(360deg);
 
 }
 
+.location_form{
+  margin-top: -12em;
+}
 
 #globe{
     margin-left: auto;
@@ -146,7 +143,6 @@ transform: rotate(360deg);
     text-align:center;
     padding-right: 15%;
     padding-left: 15%;
-
 }
 
 #p3{
@@ -159,11 +155,9 @@ transform: rotate(360deg);
 }
 
 
-
 #newFriend{
   font-size:1em;
 }
-
 
 
 #field_invites{
@@ -172,14 +166,10 @@ transform: rotate(360deg);
   left:15%;
 }
 
-
-
-
-
 #slide2 img:first-child{
-    position:absolute;
-top: 700px;
-left: -150px;
+  position:absolute;
+  top: 700px;
+  left: -150px;
 }
 #slide2 img:nth-child(2){
     position:absolute;
@@ -323,5 +313,9 @@ html,body{
 
 
 
+#home {
+  text-align:center;
+  margin:15em auto 15em auto;
+}
 
 

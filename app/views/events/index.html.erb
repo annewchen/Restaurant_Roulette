@@ -1,9 +1,4 @@
-<!-- <ul class="navigation">
-    <li class="" data-slide="1">Welcome</li>
-    <li class="" data-slide="2">Location</li>
-    <li class="" data-slide="3">Choose Your Friends</li>
-    <li class="" data-slide="4">Send Invitations</li>
-</ul> -->
+<%= render partial: "navbar" %>
 <div class="slide" id="slide1" data-slide="1" data-stellar-background-ratio="0.5">
 <div class = "field">
   <div id = "error"><%= flash[:invitation_error] %></div>
@@ -15,15 +10,15 @@
 </div><!--End Slide 1-->
 
 
-<div class="slide" id="slide2" data-slide="2" data-stellar-background-ratio="0.5">
-<br>
-<img src="../assets/location.png" height="340" width="340" id="globe">
-<%= form_for :event, url: events_path do |f| %>
-  <div>
-    <%= f.label "What is your current location?", :class => "header2" %>
-    <p id="p2"><%= f.text_field :street_address %></p>
-  </div>
-  <a class="button" data-slide="3" title=""></a>
+
+<div class="slide" id="slide2" data-slide="2" data-stellar-background-ratio="0.5"><br>
+  <img src="../assets/location.png" height="340" width="340" id="globe"/>
+  <%= form_for :event, url: events_path, :class => "location_form" do |f| %>
+
+      <%= f.label "What is your current location?", :class => "header2" %>
+      <p id="p2"><%= f.text_field :street_address %></p>
+
+    <a class="button" data-slide="3" title=""></a>
 </div><!--End Slide 2-->
 
 
@@ -44,6 +39,5 @@
   <br>
     <%= f.submit "Send Invitations", :id => "buttonInvite" %>
     <img src="../assets/mail.png" height="350" width="350" id="mail">
-<% end %>
 </div><!--End Slide 4-->
-
+<% end %>

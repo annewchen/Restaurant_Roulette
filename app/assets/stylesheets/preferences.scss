@@ -2,6 +2,66 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.page{
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
+.navbar-text{
+  font-size: 1.5em;
+  text-align: left;
+}
+.home{
+  margin-top: 15em;
+}
+
+.title{
+  font-size: 2.5em;
+  margin-bottom: 0em;
+}
+
+#vote-header{
+  font-size: 3em;
+  magin-top: 0em;
+}
+
 #error {
   color: red;
+}
+
+
+form{
+  margin-top: 0em;
+}
+
+label {
+  font-size: 1.5em;
+}
+
+select {
+  background-color: white;
+  font-weight: normal;
+}
+
+.option {
+  text-align: center;
+  font-size: 2.5em;
+  padding: .5em;
+}
+
+.submit-btn {
+  background-color: grey;
+  font-size: 1em;
+  margin-top: 1em;
+}
+
+.preferences {
+  margin:15em auto 15em auto;
+}
+
+.cancel_acct{
+  margin-top: 13em;
+}
+
+.container {
+  margin-top: 5em;
 }
