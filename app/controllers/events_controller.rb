@@ -29,9 +29,15 @@ class EventsController < ApplicationController
       if flash[:invitation_error]  # there was a problem
           render "index"
       else
-        #text all invitees
-        TextMessagesHelper.send_text_messages_to_invitees_and_planner(@event)
-        render "event_saved"
+        begin
+          #text all invitees
+          TextMessagesHelper.send_text_messages_to_invitees_and_planner(@event)
+          render "event_saved"
+        rescue Twilio::REST::RequestError => e
+          p "$$$$$$$$$$$$$$$$$ twilio error: #{e.message}"
+          flash.now[:invitation_error] = e.message
+          render "index"
+        end
       end
     else #else for event save
       flash.now[:event_error] = "You need to enter a location and invite at least one person"
