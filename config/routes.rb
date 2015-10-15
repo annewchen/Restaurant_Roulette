@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'welcome/index'
+
   get 'preferences/index'
 
   devise_for :users, :skip => [:events]
@@ -9,7 +11,15 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'events#index'
+  authenticated :user do
+      root to: 'events#index', as: :authenticated_root
+  end
+
+  root 'welcome#index'
+
+  resources :events, only: [:index, :new, :create] do
+    resources :preferences
+  end
 
   resources :text_messages
 
@@ -21,9 +31,6 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
 
-  resources :events, only: [:index, :new, :create] do
-    resources :preferences
-  end
 
   resources :invitations, only: [:index, :create, :new]
 
