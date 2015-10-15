@@ -9,16 +9,30 @@
 
 div#home.page.welcome{
   background-size: cover;
-  height: 930px;
+  height: 45em;
   margin-top: 0px;
   border: 0px;
   margin-bottom: 0px;
   background: url(food.jpg);
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 #homeTitle{
-  font-size:12em;
+  font-size:8em;
   color:#ffffff;
-  text-shadow: 4px 4px 4px #000000;
+  text-shadow: 10px 5px 10px #000000;
   margin-top:1em;
+}
+
+.welcome-btn{
+  color: white;
+  font-size: 3em;
+  padding-left: 1em;
+  text-shadow: 4px 4px 4px #000000;
+  font-weight: bold;
+}
+.welcome-btn:hover{
+  text-decoration: none;
+  color: orange;
 }
