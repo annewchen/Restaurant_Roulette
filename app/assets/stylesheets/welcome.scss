@@ -1,0 +1,43 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+ #home {
+   text-align:center;
+   margin:12em auto 12em auto;
+}
+
+
+div#home.page.welcome{
+  border: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background-image:url("food.jpg");
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  overflow:hidden;
+  background-size: cover;
+
+}
+
+#homeTitle{
+  font-size:8em;
+  color:#ffffff;
+  text-shadow: 10px 5px 10px #000000;
+  margin-top:1em;
+}
+
+.welcome-btn{
+  color: white;
+  font-size: 3em;
+  padding-left: 1em;
+  text-shadow: 4px 4px 4px #000000;
+  font-weight: bold;
+}
+.welcome-btn:hover{
+  text-decoration: none;
+  color: orange;
+}

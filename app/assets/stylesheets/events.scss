@@ -1,3 +1,371 @@
 // Place all the styles related to the events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#phone_number{
+  border-radius:25px;
+  border-style: solid;
+  border-color:#550000;
+  color:#808080;
+  font-size:18px;
+  padding-top:0.5em;
+  padding-bottom:0.5em;
+  padding-right:0.2px;
+  padding-left: 1em;
+}
+
+#name{
+  border-radius:25px;
+  border-style: solid;
+  border-color:#550000;
+  color:#808080;
+  font-size:18px;
+  padding-top:0.5em;
+  padding-bottom:0.5em;
+  padding-right:0.2px;
+  padding-left: 1em;
+
+}
+
+.addInvitation {
+  border-radius: 50px;
+  font-family: 'Raleway', sans-serif;
+  color: #660000;
+  font-size: 3em;
+  background: #ffffff;
+  padding: 5px 10px 5px 10px;
+  border: solid #660000 5px;
+  text-decoration: none;
+  width:30%;
+  margin-left:35%;
+
+}
+
+#event_street_address{
+  border-radius:30px;
+}
+
+#deleteButton {
+  border-radius: 50px;
+  font-family: 'Raleway', sans-serif;
+  color: #660000;
+  font-size: 0.5em;
+  background: #ffffff;
+  padding: 9px 2px 9px 2px;
+  border: solid #660000 3px;
+  text-decoration: none;
+}
+
+
+.invitationForm{
+  margin-top:2%;
+}
+
+
+#buttonInvite {
+  -webkit-border-radius: 34;
+  -moz-border-radius: 34;
+  border-radius: 50px;
+  font-family: 'Raleway', sans-serif;
+  color: #e68443;
+  font-size: 500%;
+  background: #ffffff;
+  padding: 30px 80px 30px 80px;
+  border: solid #e68443 5px;
+  text-decoration: none;
+  position:absolute;
+  width:50%;
+  margin-top:15%;
+  margin-left:25%;
+  margin-right:25%;
+}
+
+#buttonInvite:hover {
+  background: #ffffff;
+  text-decoration: none;
+}
+
+
+#buttonInvite{
+-moz-transition: all 1s ease-in-out;
+-webkit-transition: all 1s ease-in-out;
+-o-transition: all 1s ease-in-out;
+-ms-transition: all 1s ease-in-out;
+transition: all 1s ease-in-out;
+}
+
+#buttonInvite:hover{
+-moz-transform: rotate(360deg);
+-webkit-transform: rotate(360deg);
+-o-transform: rotate(360deg);
+-ms-transform: rotate(360deg);
+transform: rotate(360deg);
+}
+
+
+/******************************
+ SLIDE 1
+*******************************/
+#slide1{
+    background-color:#33CC33;
+}
+
+#p1{
+    padding-top: 3%;
+    font-size:3.5em;
+    text-align:center;
+    padding-right: 15%;
+    padding-left: 15%;
+}
+
+#header{
+  font-family: 'Raleway', sans-serif;
+  color:#ffffff;
+  font-size:5em;
+  margin-top:0%;
+  padding-top: 10%;
+  font-weight: 550;
+  text-align:center;
+  padding-right: 15%;
+  padding-left: 15%;
+}
+
+.header2{
+  font-family: 'Raleway', sans-serif;
+  color:#ffffff;
+  font-size:5em;
+  text-align:center;
+  font-weight:normal;
+  padding-top:5%;
+  padding-left:20%;
+}
+
+.header3{
+  font-family: 'Raleway', sans-serif;
+  color:#ffffff;
+  font-size:5em;
+  text-align:center;
+  font-weight:normal;
+  padding-top:5%;
+}
+
+
+/******************************
+ SLIDE 2
+*******************************/
+#slide2{
+    background-color:#0066CC;
+
+}
+
+.location_form{
+  margin-top: -12em;
+}
+
+#globe{
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#mail{
+    margin-left: 5%;
+    margin-top: 22%;
+}
+
+#p2{
+    padding-top: 1%;
+    color:#808080;
+    font-size:3.5em;
+    text-align:center;
+    padding-right: 15%;
+    padding-left: 15%;
+}
+
+#p3{
+    font-size:2em;
+    text-align:center;
+    font-family: 'Raleway', sans-serif;
+    color:#ffffff;
+}
+
+
+#newFriend{
+  font-size:1em;
+}
+
+
+#field_invites{
+  position:relative;
+  width:70%;
+  left:15%;
+}
+
+#slide2 img:first-child{
+  position:absolute;
+  top: 700px;
+  left: -150px;
+}
+#slide2 img:nth-child(2){
+    position:absolute;
+    top:300px;
+    left:100px;
+}
+#slide2 img:nth-child(3){
+    position:absolute;
+    top:600px;
+    left:300px;
+}
+#slide2 img:nth-child(4){
+    position:absolute;
+    top:400px;
+    left:300px;
+}
+#slide2 img:nth-child(5){
+    position:absolute;
+    top:600px;
+    right:300px;
+}
+#slide2 img:nth-child(6){
+    position:absolute;
+    top:600px;
+    right:300px;
+}
+#slide2 img:nth-child(7){
+    position:absolute;
+    top:400px;
+    right:100px;
+}
+#slide2 img:nth-child(8){
+    position:absolute;
+    top:100px;
+    right:300px;
+}
+
+
+/****************************** SLIDE 3 *******************************/
+
+#invites{
+   font-size:2em;
+}
+
+
+#slide3 {
+    background-color:#CC3300;
+}
+#slide3 img:first-child {
+    position:absolute;
+    top: 700px;
+    left: 300px;
+}
+#slide3 img:nth-child(2){
+    position:absolute;
+    top:100px;
+    left:100px;
+}
+#slide3 img:nth-child(3){
+    position:absolute;
+    top:150px;
+    left:300px;
+}
+#slide3 img:nth-child(4){
+    position:absolute;
+    top:450px;
+    left:300px;
+}
+#slide3 img:nth-child(5){
+    position:absolute;
+    top:200px;
+    right:300px;
+}
+#slide3 img:nth-child(6){
+    position:absolute;
+    top:100px;
+    right:300px;
+}
+
+
+#slide4 {
+    background-color:orange;
+}
+
+
+html,body{
+    font-family: Tahoma;
+    width:100%;
+    height:100%;
+
+}
+
+.navigation {
+    position:fixed;
+    z-index:1;
+    top:20px;
+}
+.navigation li {
+    color:#333333;
+    display:block;
+    padding: 0 10px;
+    line-height:30px;
+    margin-bottom:2px;
+    font-weight:bold;
+    -webkit-transition: all .2s ease-in-out;
+    border-bottom:1px solid black;
+    text-align:left;
+    width:53px;
+}
+.navigation li:hover,
+.active {
+    font-size:25px;
+    cursor:pointer;
+    width:100px!important;
+}
+
+.slide {
+    background-attachment: fixed;
+    width:100%;
+    height:100%;
+    position: relative;
+    font-family: 'Raleway', sans-serif;
+    color:#ffffff;
+    box-shadow:inset 0px 10px 10px rgba(0,0,0,0.3);
+}
+
+.button{
+    display:block;
+    width:50px;
+    height:50px;
+    position:absolute;
+    bottom:0px;
+    left:50%;
+    background-color:#333333;
+    background-image:url(arrow.png);
+    background-repeat:no-repeat;
+}
+.button:hover{
+    background-color:#494949;
+    cursor:pointer;
+}
+
+
+
+#home {
+  text-align:center;
+  margin:15em auto 15em auto;
+}
+
+
+.submitting {
+  font-family: 'Raleway';
+  text-align: center;
+  margin-top: 25em;
+  padding-bottom: 40em;
+  color: white;
+}
+
+#submitting-thank-you {
+  background-image: url("http://www.trbimg.com/img-5564c178/turbine/ct-dining-0528-summer-eating-list-20150526");
+  background-size: 100% 100%;
+
+}
+

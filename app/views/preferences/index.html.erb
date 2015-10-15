@@ -1,31 +1,51 @@
- <h1>You are invited to grab some food by, <%= User.find_by(id: @event.planner_id).full_name %>!</h1>
+<div class = "preference-page">
+  <div class="container">
+    <div class="page" id="preference-page">
+      <h1 class="preference-title">Restaurant Roulette</h1></br>
+      <p class="title">Grab some grub with:</p>
+      <h2 id="vote-header"><%= User.find_by(id: @event.planner_id).full_name %> near <%=@event.street_address%>!</h2></br>
+      <h4 id="filter-warning">Please fill out 2 filters only</h4>
 
-<div id = "error"><%= flash[:filter] %></div>
+      <div id = "error"><%= flash[:filter] %></div>
 
-<%= form_for :preference do |f| %>
-  <p>
-    <%= f.label :price %><br>
-    <%= f.select :is_fancy, [['',''],['Inexpensive','false'],['Pricey','true']] %>
+      <%= form_for :preference, :html => { :id => "pref" } do |f| %>
+      <div class = "preferences">
+        <div class = "option">
+            <%= f.label :price, class: "pref-label" %>
+            <div class = "dropdown-option">
+              <%= f.select :is_fancy, [['',''],['Inexpensive','false'],['Pricey','true']] %>
+            </div>
 
-  </p>
+        </div>
 
-  <p>
-    <%= f.label :cuisine %><br>
-    <%= f.select :cuisine, [['',''],['Japanese','japanese'],['Chinese','chinese'],['American','tradamerican'], ['Italian','italian'],['Indian','indpak'],['Mexican','mexican'],['Filipino','filipino'],['Thai','thai'],['Vietnamese','vietnamese'],['African','african'], ['Mediterranean','mediterranean'], ['Korean','korean'], ['German','german'], ['French','french'], ['Cuban','cuban'], ['Greek','greek']].sort %>
+        <div class = "option">
+            <%= f.label :cuisine, class: "pref-label" %>
+            <div class = "dropdown-option">
+            <%= f.select :cuisine, [['',''],['Japanese','japanese'],['Chinese','chinese'],['American','tradamerican'], ['Italian','italian'],['Indian','indpak'],['Mexican','mexican'],['Filipino','filipino'],['Thai','thai'],['Vietnamese','vietnamese'],['African','african'], ['Mediterranean','mediterranean'], ['Korean','korean'], ['German','german'], ['French','french'], ['Cuban','cuban'], ['Greek','greek']].sort %>
+            </div>
+        </div>
 
-  </p>
+        <div class = "option">
+            <%= f.label :vegetarian, class: "pref-label" %>
+            <div class = "dropdown-option">
+              <%= f.select :is_vegetarian, [['',''],['True','true'],['False','false']] %>
+            </div>
+        </div>
 
-  <p>
-    <%= f.label :vegetarian %><br>
-    <%= f.select :is_vegetarian, [['',''],['True','true'],['False','false']] %>
-  </p>
+        <div class = "option">
+            <%= f.label :distance, class: "pref-label" %>
+            <div class = "dropdown-option">
+              <%= f.select :distance, [['',''],['1 mile','1 mile'],['2 miles','2 miles'],['5 miles','5 miles'], ['10 miles','10 miles'],['15 miles','15 miles'],['25 miles','25 miles']]%>
+            </div>
+        </div>
 
-  <p>
-    <%= f.label :distance %><br>
-    <%= f.select :distance, [['',''],['1 mile','1 mile'],['2 miles','2 miles'],['5 miles','5 miles'], ['10 miles','10 miles'],['15 miles','15 miles'],['25 miles','25 miles']] %>
-  </p>
-
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+        <div class = "option">
+            <div class = "dropdown-option">
+              <%= f.submit "Submit Preference", class: 'submit-btn btn-default' %>
+            <div class = "dropdown-option">
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
