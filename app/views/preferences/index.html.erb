@@ -8,7 +8,7 @@
 
       <div id = "error"><%= flash[:filter] %></div>
 
-      <%= form_for :preference do |f| %>
+      <%= form_for :preference, :html => { :id => "pref" } do |f| %>
       <div class = "preferences">
         <div class = "option">
             <%= f.label :price, class: "pref-label" %>
