@@ -19,9 +19,18 @@
   margin-bottom: 0em;
 }
 
+.preference-title{
+  font-size: 3.5em;
+  margin-bottom: 0em;
+}
+
+#filter-warning {
+  font-weight: bold;
+}
+
 #vote-header{
-  font-size: 3em;
-  magin-top: 0em;
+  font-size: 2em;
+  margin-top: 0em;
 }
 
 #error {
@@ -29,12 +38,13 @@
 }
 
 
-form{
-  margin-top: 0em;
+form#pref{
+  margin-top: -10em;
 }
 
-label {
-  font-size: 1.5em;
+.pref-label {
+  font-size: 1em;
+  font-weight: normal;
 }
 
 select {
@@ -45,7 +55,6 @@ select {
 .option {
   text-align: center;
   font-size: 2.5em;
-  padding: .5em;
 }
 
 .submit-btn {
@@ -55,13 +64,25 @@ select {
 }
 
 .preferences {
-  margin:15em auto 15em auto;
+  margin:12em auto 5em auto;
+}
+
+.preference-page {
+  background-color: white;
 }
 
 
 
-.container {
-  margin-top: 5em;
+.page {
+  padding-top: 1em;
+}
+
+#preference-page {
+  border-style: solid;
+  border-radius: 8em;
+  box-shadow: 10px 10px 5px #888888;
+  margin: 5em 5em 5em 5em;
+  background-color: #FF9900;
 }
 
 
@@ -76,5 +97,14 @@ select {
 #preference-thank-you {
   background-image: url("http://www.trbimg.com/img-5564c178/turbine/ct-dining-0528-summer-eating-list-20150526");
   background-size: 100% 100%;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
 
+}
+
+.container {
+  max-width: 60em;
 }
