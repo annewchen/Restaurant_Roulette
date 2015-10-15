@@ -1,4 +1,4 @@
- <h1>You are invited to grab some food by, <%= User.find_by(id: @event.planner_id).full_name %>!</h1>
+ <h1>You are invited to grab some food by <%= User.find_by(id: @event.planner_id).full_name %>!</h1>
 
 <div id = "error"><%= flash[:filter] %></div>
 
@@ -45,7 +45,7 @@
   <div class = "option">
     <p>
       <div class = "dropdown-option">
-        <%= f.submit %>
+        <%= f.submit "Submit Preference", class: 'btn' %>
       <div class = "dropdown-option">
     </p>
   </div>

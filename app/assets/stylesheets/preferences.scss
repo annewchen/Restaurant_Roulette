@@ -7,7 +7,26 @@
   font-size: 3em;
 }
 
-#preference_is_fancy {
+label {
+  font-size: 1.5em;
+}
+
+submit {
+  font-size: 1.5em;
+}
+
+select {
+  padding: 5em;
+  background-color: grey;
+  width: 8em;
+  height: 2em;
+  font-size: 1em;
+}
+
+
+.btn {
+  background-color: grey;
+  font-size: 1em;
 }
 
 .preferences {
