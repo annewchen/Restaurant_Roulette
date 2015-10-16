@@ -4,6 +4,19 @@ class EventsController < ApplicationController
   def index
     session[:user_id] = current_user.id
     @user = User.find_by(id: session[:user_id])
+
+    p "#" * 30
+    @previously_invited_friends = {}
+    @previously_invited_phone_numbers = {}
+
+    # construct a phone book mapping all names to phone numbers
+    # and construct a reverse phonebook matching all phone numbers
+    @user.events.each do |event|
+      event.invitations.each do |invitation|
+        @previously_invited_friends[invitation.full_name] = invitation.phone_number
+        @previously_invited_phone_numbers[invitation.phone_number] = invitation.full_name
+      end
+    end
   end
 
   def create

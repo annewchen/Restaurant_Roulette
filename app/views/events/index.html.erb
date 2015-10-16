@@ -1,3 +1,25 @@
+<script>
+    console.log("loading view");
+    var friends_to_numbers = <%= raw @previously_invited_friends.to_json %>;
+    var numbers_to_friends = <%= raw @previously_invited_phone_numbers.to_json %>;
+
+
+    $( document ).ready(function() {
+
+      $(".invitationSet").bind('input', function (e) {
+        //find match for name
+        var selectedName = e.target.value;
+        var matchedNumber = friends_to_numbers[selectedName];
+
+        if (matchedNumber) {
+            phone_number_element = $(e.target.parentElement).find('.my_phone_number');
+            $(phone_number_element).attr('value', matchedNumber);
+        }
+      });
+
+    });
+</script>
+
 <%= render partial: "navbar" %>
 <%= form_for :event, url: events_path, :html => {:class => "location_form"} do |f| %>
 <div class="slide" id="slide1" data-slide="1" data-stellar-background-ratio="0.5">
@@ -29,7 +51,7 @@
   <p class="header3">Choose Your Friends</p>
   <button type="button" class="addInvitation">Add Friend</button>
   <div class="invitationSet">
-    <%= render partial: "invitation_form" %>
+    <%= render partial: "invitation_form", :locals => {:friend_names => @previously_invited_friends.keys, :phone_numbers => @previously_invited_phone_numbers.keys} %>
   </div>
 <a class="button" data-slide="4" title=""></a>
 </div><!--End Slide 3-->
