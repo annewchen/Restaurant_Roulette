@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#phone_number{
+.phone_number{
   border-radius:25px;
   border-style: solid;
   border-color:#550000;
@@ -11,10 +11,10 @@
   padding-top:0.5em;
   padding-bottom:0.5em;
   padding-right:0.2px;
-  padding-left:0.2px;
+  padding-left: 1em;
 }
 
-#name{
+.name{
   border-radius:25px;
   border-style: solid;
   border-color:#550000;
@@ -23,7 +23,8 @@
   padding-top:0.5em;
   padding-bottom:0.5em;
   padding-right:0.2px;
-  padding-left:0.2px;
+  padding-left: 1em;
+
 }
 
 .addInvitation {
@@ -158,7 +159,7 @@ transform: rotate(360deg);
 }
 
 .location_form{
-  margin-top: -12em;
+  height:100%;
 }
 
 #globe{
@@ -247,6 +248,7 @@ transform: rotate(360deg);
 #invites{
    font-size:2em;
 }
+
 
 #slide3 {
     background-color:#CC3300;

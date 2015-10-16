@@ -1,14 +1,14 @@
 <div class = "invitationForm">
   <div id = "field_invites">
   <p id="p3">
-    Name <input id="name" class="my_full_name" type='text' name='full_name[]' placeholder='John Doe' list="names"></input>
+    Name <input class="name my_full_name" type='text' name='full_name[]' placeholder='John Doe' list="names"></input>
     <datalist id="names">
       <% friend_names.each do |name| %>
         <option value="<%= name %>">
       <% end %>
     </datalist>
 
-    Phone Number <input id="phone_number" class="my_phone_number" type='text' name='phone_number[]' placeholder='xxx-xxx-xxxx' list="numbers">
+    Phone Number <input class="phone_number my_phone_number" type='text' name='phone_number[]' placeholder='xxx-xxx-xxxx' list="numbers">
     <datalist id="numbers">
       <% phone_numbers.each do |number| %>
         <option value="<%= number %>">
