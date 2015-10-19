@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#phone_number{
+.phone_number{
   border-radius:25px;
   border-style: solid;
   border-color:#550000;
@@ -14,7 +14,7 @@
   padding-left: 1em;
 }
 
-#name{
+.name{
   border-radius:25px;
   border-style: solid;
   border-color:#550000;
@@ -159,7 +159,7 @@ transform: rotate(360deg);
 }
 
 .location_form{
-  margin-top: -12em;
+  height:100%;
 }
 
 #globe{
