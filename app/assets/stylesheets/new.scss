@@ -1,22 +1,20 @@
 .registration{
-  background-color:orange;
   margin: auto;
   position: absolute;
   left:0;
   right: 0;
-  margin-top:2%;
+  margin-top:1%;
   margin-bottom:5%;
   width:50%;
   height:85%;
-  border-radius:25px;
-  box-shadow: 10px 10px 5px #888888;
-  border-style: solid;
-  border-color:black;
-  padding-top:55px;
+  padding-top:5px;
+  color:black;
 }
 
 #register{
-  font-size:6em;
+  font-size:5em;
+  color:orange;
+  text-shadow: 2px 2px #000000;
 }
 
 .field{
@@ -25,19 +23,23 @@
 }
 
 #regbutton{
-  margin:10px;
-  padding:10px;
-  background-color:#ffffff;
-  border-radius:25px;
-  font-size:1.5em;
+  margin:30px;
+  padding:5px 20px;
+  background-color:orange;
+  color:white;
+  font-style:bold;
+  border-radius:15px;
+  font-size:1.7em;
   border-style: solid;
-  border-color:black;
+  border-color:orange;
+  text-shadow: 1px 1px #000000;
+  box-shadow: 5px 5px 5px #888888;
 }
 
-.style_field{
- border-radius:25px;
- box-shadow: 5px 5px 5px #888888;
-border-style: solid;
-border-color:black;
-padding-left: 1em;
+
+.style_field {
+  border-radius:10px;
+  width:500px;
+  box-shadow: 5px 5px 5px #888888;
+  padding-left: 1em;
 }
