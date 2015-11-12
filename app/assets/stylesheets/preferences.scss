@@ -97,18 +97,20 @@ select {
 
 #preference-thank-you-last h1 {
   font-size: 150px;
-  font-family: Brush Script MT;
+  font-family: Raleway;
+  text-align: center;
+  color: #ff8c19;
+}
+
+#preference-thank-you-last p {
+  font-size: 50px;
+  font-family: Raleway;
   text-align: center;
   color: #ff8c19;
 }
 
 #preference-thank-you-last {
   margin-top: 220px;
-
-}
-
-#last-page {
-  background-color: #003399;
 }
 
 .container {
