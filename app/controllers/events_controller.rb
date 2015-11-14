@@ -3,20 +3,7 @@ require 'text_messages_helper'
 class EventsController < ApplicationController
   def index
     session[:user_id] = current_user.id
-    @user = User.find_by(id: session[:user_id])
-
-    p "#" * 30
-    @previously_invited_friends = {}
-    @previously_invited_phone_numbers = {}
-
-    # construct a phone book mapping all names to phone numbers
-    # and construct a reverse phonebook matching all phone numbers
-    @user.events.each do |event|
-      event.invitations.each do |invitation|
-        @previously_invited_friends[invitation.full_name] = invitation.phone_number
-        @previously_invited_phone_numbers[invitation.phone_number] = invitation.full_name
-      end
-    end
+    add_invited_friends
   end
 
   def create
@@ -42,6 +29,7 @@ class EventsController < ApplicationController
 
 
       if flash[:invitation_error]  # there was a problem
+          add_invited_friends
           render "index"
       else
         begin
@@ -51,6 +39,7 @@ class EventsController < ApplicationController
         rescue Twilio::REST::RequestError => e
           p "$$$$$$$$$$$$$$$$$ twilio error: #{e.message}"
           flash.now[:invitation_error] = e.message
+          add_invited_friends
           render "index"
         end
       end
@@ -63,6 +52,27 @@ class EventsController < ApplicationController
 
   def invitations_params(my_params)
     my_params.permit(:full_name, :phone_number)
+  end
+
+  private 
+
+  def add_invited_friends
+    @user = User.find_by(id: session[:user_id])
+
+    p "#" * 30
+    p "In events index..."
+    @previously_invited_friends = {}
+    @previously_invited_phone_numbers = {}
+
+    # construct a phone book mapping all names to phone numbers
+    # and construct a reverse phonebook matching all phone numbers
+    @user.events.each do |event|
+      event.invitations.each do |invitation|
+        @previously_invited_friends[invitation.full_name] = invitation.phone_number
+        @previously_invited_phone_numbers[invitation.phone_number] = invitation.full_name
+      end
+    end
+
   end
 
 end
