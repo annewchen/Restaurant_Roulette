@@ -10,6 +10,8 @@ class EventsController < ApplicationController
     p "params:#{params}"
     @user = User.find_by(id: current_user.id)
     @event = Event.new(street_address: params[:event][:street_address])
+    add_invited_friends
+
     if @event.save && params[:full_name] && params[:phone_number]
       @user.events << @event
       index = 0
@@ -29,7 +31,6 @@ class EventsController < ApplicationController
 
 
       if flash[:invitation_error]  # there was a problem
-          add_invited_friends
           render "index"
       else
         begin
@@ -39,7 +40,6 @@ class EventsController < ApplicationController
         rescue Twilio::REST::RequestError => e
           p "$$$$$$$$$$$$$$$$$ twilio error: #{e.message}"
           flash.now[:invitation_error] = e.message
-          add_invited_friends
           render "index"
         end
       end
