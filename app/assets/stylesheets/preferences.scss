@@ -95,15 +95,22 @@ select {
   color: white;
 }
 
-#preference-thank-you {
-  background-image: url("http://www.trbimg.com/img-5564c178/turbine/ct-dining-0528-summer-eating-list-20150526");
-  background-size: 100% 100%;
-  position:absolute;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
+#preference-thank-you-last h1 {
+  font-size: 150px;
+  font-family: Raleway;
+  text-align: center;
+  color: #ff8c19;
+}
 
+#preference-thank-you-last p {
+  font-size: 50px;
+  font-family: Raleway;
+  text-align: center;
+  color: #ff8c19;
+}
+
+#preference-thank-you-last {
+  margin-top: 220px;
 }
 
 .container {
